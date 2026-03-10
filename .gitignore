@@ -1,0 +1,10 @@
+# Godot 4+ specific ignores
+.import/
+export_presets.cfg# C#
+.mono/
+bin/
+obj/
+
+# Rider / JetBrains.idea/
+*.sln.iml*.DotSettings.user_ReSharper*/
+*.[Rr]e[Ss]harper# VS Code.vscode/*# Mantener solo configuración compartible de VS Code!.vscode/extensions.json!.vscode/settings.json!.vscode/launch.json!.vscode/tasks.json# Sistema / temporales.DS_StoreThumbs.db*.tmp*.swp
