@@ -10,13 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Segunda JAM"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/name="FlipFlop"
+run/main_scene="uid://dvjt6o35801sj"
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
 [dotnet]
 
-project/assembly_name="Segunda JAM"
+project/assembly_name="FlipFlop"
 
 [physics]
 

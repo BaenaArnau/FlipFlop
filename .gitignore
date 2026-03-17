@@ -1,10 +1,58 @@
-# Godot 4+ specific ignores
+# Godot 4+ specific
+.godot/
 .import/
-export_presets.cfg# C#
-.mono/
+export_presets.cfg
+*.translation
+*.po
+*.pot
+
+# C# / .NET
 bin/
 obj/
+*.csproj.user
+*.sln.iml
 
-# Rider / JetBrains.idea/
-*.sln.iml*.DotSettings.user_ReSharper*/
-*.[Rr]e[Ss]harper# VS Code.vscode/*# Mantener solo configuración compartible de VS Code!.vscode/extensions.json!.vscode/settings.json!.vscode/launch.json!.vscode/tasks.json# Sistema / temporales.DS_StoreThumbs.db*.tmp*.swp
+# IDEs and Editors
+# JetBrains - Rider
+.idea/
+*.DotSettings.user
+*.[Rr]e[Ss]harper
+_ReSharper*/
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono
+.mono/
+
+# System / Temporals
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# User-specific
+user_settings.json
