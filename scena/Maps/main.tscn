@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://dvjt6o35801sj"]
 
-[ext_resource type="PackedScene" uid="uid://c70oaut5dmori" path="res://scena/Player.tscn" id="1_fqdl1"]
-[ext_resource type="Script" uid="uid://dhb7kyxijsaj2" path="res://scripts/trap/Gravity.cs" id="1_pupwf"]
-[ext_resource type="Texture2D" uid="uid://du0bgpsdfpcxp" path="res://assets/icon.svg" id="3_fwi5q"]
+[ext_resource type="Script" uid="uid://dhb7kyxijsaj2" path="res://scripts/trap/Gravity.cs" id="1_f2262"]
+[ext_resource type="PackedScene" uid="uid://c70oaut5dmori" path="res://scena/Character/Player.tscn" id="2_p863f"]
+[ext_resource type="Texture2D" uid="uid://du0bgpsdfpcxp" path="res://assets/icon.svg" id="3_tdyg5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofqst"]
 size = Vector2(1183, 668)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0376q"]
 size = Vector2(1162, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pupwf"]
+size = Vector2(133, 134)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p23x2"]
 size = Vector2(129, 129)
@@ -17,9 +20,9 @@ size = Vector2(129, 129)
 
 [node name="Gravity" type="Area2D" parent="." unique_id=760309407]
 modulate = Color(1, 0.14117648, 1, 1)
-position = Vector2(585, 328)
+position = Vector2(584, 328)
 gravity_space_override = 3
-script = ExtResource("1_pupwf")
+script = ExtResource("1_f2262")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gravity" unique_id=319852065]
 modulate = Color(1, 0.14117648, 1, 1)
@@ -55,7 +58,7 @@ rotation = 1.5707964
 position = Vector2(194.99997, -585)
 shape = SubResource("RectangleShape2D_0376q")
 
-[node name="Player" parent="." unique_id=425336149 node_paths=PackedStringArray("_areaGravity") instance=ExtResource("1_fqdl1")]
+[node name="Player" parent="." unique_id=425336149 node_paths=PackedStringArray("_areaGravity") instance=ExtResource("2_p863f")]
 position = Vector2(570, 235)
 _areaGravity = NodePath("../Gravity")
 
@@ -66,7 +69,15 @@ can_sleep = false
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=478011357]
 self_modulate = Color(1, 0, 1, 1)
 position = Vector2(0, 2)
-texture = ExtResource("3_fwi5q")
+texture = ExtResource("3_tdyg5")
+
+[node name="DeadArea" type="Area2D" parent="RigidBody2D" unique_id=399626434]
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/DeadArea" unique_id=659598947]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_pupwf")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1514138663]
 position = Vector2(0.5, 1.5)
