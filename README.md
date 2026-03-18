@@ -43,9 +43,3 @@ El objetivo es avanzar por el nivel usando la inversión de gravedad para **repo
 - Proyecto: **FlipFlop**
 - Engine: Godot + C#
 
----
-
-Si quieres, dime:
-1) si el juego tiene **meta concreta** (llegar a una meta, tiempo, puntos, etc.),  
-2) si hay **enemigos / trampas específicas**,  
-y te adapto el README a la descripción real del gameplay (con “Cómo jugar”, “Objetivo”, “Características”, y un apartado de “Capturas/GIFs”).
