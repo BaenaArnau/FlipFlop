@@ -5,4 +5,9 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>SegundaJAM</RootNamespace>
   </PropertyGroup>
+
+  <!-- Incluir carpeta files en la solución -->
+  <ItemGroup>
+    <Folder Include="files\" />
+  </ItemGroup>
 </Project>
