@@ -56,7 +56,7 @@ namespace FlipFlop.Scripts.Menus
 	    public void OnSettingsPressed()
 	    {
 		    ButtonTools.PlayPressAnimation(
-			    _exitButton,
+			    _settingsButton,
 			    () => { Visibilities(); });
 	    }
 
@@ -66,7 +66,7 @@ namespace FlipFlop.Scripts.Menus
 	    public void OnPlayPressed()
 	    {
 		    ButtonTools.PlayPressAnimation(
-			    _exitButton,
+			    _playButton,
 			    () => { GetTree().ChangeSceneToFile("res://scena/Maps/main.tscn"); });
 	    }
 

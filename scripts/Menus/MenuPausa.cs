@@ -149,7 +149,8 @@ namespace FlipFlop.Scripts.Menus
 		}
 
 		/// <summary>
-		/// Cierra la aplicación del juego.
+		/// Regresa al menú principal desde el menú de pausa.
+		/// Reanuda el juego y carga la escena del menú principal.
 		/// </summary>
 		public void OnExitPressed()
 		{
@@ -157,7 +158,11 @@ namespace FlipFlop.Scripts.Menus
 				_exitButton,
 				() =>
 				{
-					GetTree().ChangeSceneToFile("res://scena/Menus/MenuPausa.tscn"); 
+					if (_playerNode != null)
+					{
+						_playerNode.SetPhysicsProcess(true);
+					}
+					GetTree().ChangeSceneToFile("res://scena/Menus/main_menu.tscn"); 
 				});
 		}
 
