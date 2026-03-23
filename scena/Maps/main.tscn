@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dhb7kyxijsaj2" path="res://scripts/trap/Gravity.cs" id="1_f2262"]
 [ext_resource type="PackedScene" uid="uid://c70oaut5dmori" path="res://scena/Character/Player.tscn" id="2_p863f"]
 [ext_resource type="Texture2D" uid="uid://du0bgpsdfpcxp" path="res://assets/icon.svg" id="3_tdyg5"]
+[ext_resource type="PackedScene" uid="uid://dssfva0ebrpvd" path="res://scena/Menus/MenuPausa.tscn" id="4_menu_pausa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofqst"]
 size = Vector2(1183, 668)
@@ -58,9 +59,13 @@ rotation = 1.5707964
 position = Vector2(194.99997, -585)
 shape = SubResource("RectangleShape2D_0376q")
 
-[node name="Player" parent="." unique_id=425336149 node_paths=PackedStringArray("_areaGravity") instance=ExtResource("2_p863f")]
+[node name="Player" parent="." unique_id=425336149 instance=ExtResource("2_p863f")]
 position = Vector2(570, 235)
-_areaGravity = NodePath("../Gravity")
+_areaGravityPath = NodePath("../Gravity")
+
+[node name="MenuPausa" parent="." unique_id=2114205393 node_paths=PackedStringArray("_playerNode") instance=ExtResource("4_menu_pausa")]
+visible = false
+_playerNode = NodePath("../Player")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=101769152 groups=["Trap"]]
 position = Vector2(252, 521)

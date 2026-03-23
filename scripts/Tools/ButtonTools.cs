@@ -1,7 +1,7 @@
 using System;
 using Godot;
 
-namespace Faeterna.scripts.Tools
+namespace FlipFlop.scripts.Tools
 {
     /// <summary>
     /// Clase utilidad que proporciona funciones para animar botones.

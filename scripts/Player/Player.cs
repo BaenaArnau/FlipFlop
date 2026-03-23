@@ -25,6 +25,11 @@ namespace FlipFlop.Scripts.Player
 		public bool IsDead = false;
 
 		/// <summary>
+		/// Indica si el jugador ha realizado movimiento horizontal desde el inicio de la partida
+		/// </summary>
+		private bool _hasMoved = false;
+
+		/// <summary>
 		/// Referencia al área de gravedad que controla la inversión de gravedad
 		/// </summary>
 		[Export] private NodePath _areaGravityPath;
@@ -83,14 +88,15 @@ namespace FlipFlop.Scripts.Player
 		/// </summary>
 		private void _handleJump()
 		{
-			if ((Input.IsActionJustPressed("ui_accept") && IsOnFloor()) || 
-			    (Input.IsActionJustPressed("ui_accept") && IsOnCeiling()))
+			if ((Input.IsActionJustPressed("flip") && IsOnFloor()) || 
+			    (Input.IsActionJustPressed("flip") && IsOnCeiling()))
 			{
 				if (_areaGravity != null)
 				{
 					_areaGravity.ChangeGravity();
 				}
 				UpDirection = -UpDirection;
+				_hasMoved = true;
 			}
 		}
 
@@ -102,10 +108,11 @@ namespace FlipFlop.Scripts.Player
 		/// <returns>Velocidad modificada con el movimiento aplicado</returns>
 		private Vector2 _handleMovement(Vector2 velocity)
 		{
-			Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-			if (direction != Vector2.Zero)
+			float direction = Input.GetAxis("move_left", "move_rigth");
+			if (direction != 0)
 			{
-				velocity.X = direction.X * Speed;
+				velocity.X = direction * Speed;
+				_hasMoved = true;
 			}
 			else
 			{
@@ -124,6 +131,15 @@ namespace FlipFlop.Scripts.Player
 		{
 			Vector2 gravity = GetGravity();
 			return velocity + gravity * delta;
+		}
+
+		/// <summary>
+		/// Indica si el jugador se ha movido desde el inicio de la partida.
+		/// </summary>
+		/// <returns>true si el jugador ha presionado alguna tecla de movimiento, false si no</returns>
+		public bool HasMoved()
+		{
+			return _hasMoved;
 		}
 	}
 }

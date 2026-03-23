@@ -1,4 +1,4 @@
-using Faeterna.scripts.Tools;
+using FlipFlop.scripts.Tools;
 using Godot;
 
 namespace FlipFlop.Scripts.Menus
@@ -9,10 +9,13 @@ namespace FlipFlop.Scripts.Menus
     /// </summary>
     public partial class OptionsMenu : Control
     {
+        [ExportGroup("References")]
+        [Export] private MenuPausa _puaseMenu = null;
+        
         /// <summary>
         /// Referencia al menú principal para volver a él
         /// </summary>
-        [Export] private MainMenu _mainMenu;
+        [Export] private MainMenu _mainMenu = null;
         
         /// <summary>
         /// Botón selector de anti-aliasing (Off, FXAA, TAA, MSAA 2x/4x/8x)
@@ -526,7 +529,10 @@ namespace FlipFlop.Scripts.Menus
                 _exitButton,
                 () =>
                 {
-                    _mainMenu.Visibilities();
+                    if (_mainMenu != null)
+                        _mainMenu.Visibilities();
+                    else
+                        _puaseMenu.Visibilities();
                 }
             );
         }

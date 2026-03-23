@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using FlipFlop.scripts.Tools;
 
 namespace FlipFlop.Scripts.Menus
 {
@@ -54,7 +55,9 @@ namespace FlipFlop.Scripts.Menus
     	/// </summary>
 	    public void OnSettingsPressed()
 	    {
-		    Visibilities();
+		    ButtonTools.PlayPressAnimation(
+			    _exitButton,
+			    () => { Visibilities(); });
 	    }
 
 	    /// <summary>
@@ -62,7 +65,9 @@ namespace FlipFlop.Scripts.Menus
 	    /// </summary>
 	    public void OnPlayPressed()
 	    {
-		    GetTree().ChangeSceneToFile("res://Scenes/Maps/main.tscn");
+		    ButtonTools.PlayPressAnimation(
+			    _exitButton,
+			    () => { GetTree().ChangeSceneToFile("res://scena/Maps/main.tscn"); });
 	    }
 
 	    /// <summary>
@@ -70,7 +75,9 @@ namespace FlipFlop.Scripts.Menus
 	    /// </summary>
 	    public void OnExitPressed()
 	    {
-		    GetTree().Quit();
+		    ButtonTools.PlayPressAnimation(
+			    _exitButton,
+			    () => { GetTree().Quit(); });
 	    }
 
 	    /// <summary>

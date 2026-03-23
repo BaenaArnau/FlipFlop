@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-namespace Faeterna.scripts.Tools
+namespace FlipFlop.scripts.Tools
 {
     /// <summary>
     /// Record que almacena todos los datos de configuración del juego.
