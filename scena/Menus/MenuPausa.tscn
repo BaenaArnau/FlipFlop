@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ca0e7j2eqj4tq" path="res://scripts/Menus/MenuPausa.cs" id="1_nus5q"]
 [ext_resource type="PackedScene" uid="uid://bs020765jqkky" path="res://scena/Menus/OptionsMenu.tscn" id="2_tue5e"]
 
-[node name="MenuPausa" type="Control" unique_id=2114205393 node_paths=PackedStringArray("_optionsMenu", "_returnButton", "_exitButton", "_settingsButton", "_player")]
+[node name="MenuPausa" type="Control" unique_id=2114205393 node_paths=PackedStringArray("_optionsMenu", "_returnButton", "_exitButton", "_settingsButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,15 +16,15 @@ _optionsMenu = NodePath("OptionsMenu")
 _returnButton = NodePath("VBoxContainer/Return")
 _exitButton = NodePath("VBoxContainer/Exit")
 _settingsButton = NodePath("VBoxContainer/Settings")
-_player = NodePath("../Player")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=15002498]
+[node name="TextureRect" type="ColorRect" parent="." unique_id=694734813]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.012617188, 0.012617188, 0.012617188, 0.24705882)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=909796179]
 custom_minimum_size = Vector2(200, 0)
@@ -40,7 +40,6 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
 theme_override_constants/separation = 20
 alignment = 1
 

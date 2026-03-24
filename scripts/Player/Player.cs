@@ -1,3 +1,4 @@
+using FlipFlop.Scripts.Menus;
 using Godot;
 using FlipFlop.Scripts.Trap;
 
@@ -23,6 +24,7 @@ namespace FlipFlop.Scripts.Player
 		/// Indica si el jugador está muerto
 		/// </summary>
 		public bool IsDead = false;
+		private bool _deathHandled = false;
 
 		/// <summary>
 		/// Indica si el jugador ha realizado movimiento horizontal desde el inicio de la partida
@@ -34,6 +36,8 @@ namespace FlipFlop.Scripts.Player
 		/// </summary>
 		[Export] private NodePath _areaGravityPath;
 		private Gravity _areaGravity;
+		
+		[Export] private DeadMenu _deadMenu;
 		
 		/// <summary>
 		/// Inicialización del jugador al entrar en la escena.
@@ -55,8 +59,16 @@ namespace FlipFlop.Scripts.Player
 		public override void _PhysicsProcess(double delta)
 		{
 			if (IsDead)
-				QueueFree();
-			
+			{
+				if (!_deathHandled)
+				{
+					_deadMenu?.ChangeVisibility(true);
+					_deathHandled = true;
+					QueueFree();
+				}
+				return;
+			}
+
 			Vector2 velocity = Velocity;
 
 			velocity = _handleGravity(velocity, (float)delta);

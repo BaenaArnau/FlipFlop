@@ -14,6 +14,7 @@ namespace FlipFlop.Scripts.Trap
 		/// Lista de RigidBody2D actualmente dentro del área de gravedad
 		/// </summary>
 		private List<RigidBody2D> _rigidBodies = new List<RigidBody2D>();
+		private HashSet<Area2D> _deadAreaConnections = new HashSet<Area2D>();
 		
 		/// <summary>
 		/// Inicialización del área de gravedad.
@@ -62,15 +63,10 @@ namespace FlipFlop.Scripts.Trap
 					_rigidBodies.Add(rigidBody);
 				}
 				
-				if (rigidBody.GetNode("DeadArea") is Area2D deadArea)
+				if (rigidBody.GetNode("DeadArea") is Area2D deadArea && !_deadAreaConnections.Contains(deadArea))
 				{
-					try
-					{
-						deadArea.BodyEntered -= OnDeadAreaBodyEntered;
-					}
-					catch { }
-					
 					deadArea.BodyEntered += OnDeadAreaBodyEntered;
+					_deadAreaConnections.Add(deadArea);
 				}
 			}
 		}
@@ -86,8 +82,11 @@ namespace FlipFlop.Scripts.Trap
 			{
 				_rigidBodies.Remove(rigidBody);
 				
-				if (rigidBody.GetNode("DeadArea") is Area2D deadArea)
+				if (rigidBody.GetNode("DeadArea") is Area2D deadArea && _deadAreaConnections.Contains(deadArea))
+				{
 					deadArea.BodyEntered -= OnDeadAreaBodyEntered;
+					_deadAreaConnections.Remove(deadArea);
+				}
 			}
 		}
 	}

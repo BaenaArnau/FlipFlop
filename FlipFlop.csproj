@@ -8,6 +8,7 @@
 
   <!-- Incluir carpeta files en la solución -->
   <ItemGroup>
-    <Folder Include="files\" />
+      <Content Include="files\*.csv" />
+      <Content Include="shaders\*.gdshader" />
   </ItemGroup>
 </Project>
