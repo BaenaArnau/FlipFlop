@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://bs020765jqkky"]
 
 [ext_resource type="Script" uid="uid://ljsyheb4uu80" path="res://scripts/Menus/OptionsMenu.cs" id="1_ak2df"]
+[ext_resource type="FontFile" uid="uid://mfhc4t6yawjn" path="res://theme/Fuente/Astron Boy Wonder.otf" id="1_heatc"]
+
+[sub_resource type="Theme" id="Theme_awcr3"]
+default_font = ExtResource("1_heatc")
+default_font_size = 30
 
 [node name="OptionsMenu" type="Control" unique_id=194965363 node_paths=PackedStringArray("_antialiasing", "_vsync", "_screen", "_fpslock", "_fpsslider", "_fpsspinbox", "_shadows", "_master", "_masterSpinBox", "_music", "_musicSpinBox", "_soundfx", "_soundfxSpinBox", "_enviroment", "_enviromentSpinBox", "_uisound", "_uisoundSpinBox", "_saveButton", "_exitButton")]
 texture_filter = 1
@@ -10,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_awcr3")
 script = ExtResource("1_ak2df")
 _antialiasing = NodePath("VBoxContainer/MarginContainer/TabContainer/Video/MarginContainer/VBoxContainer/Anti-Aliasing/OptionButton")
 _vsync = NodePath("VBoxContainer/MarginContainer/TabContainer/Video/MarginContainer/VBoxContainer/V-Sync/OptionButton")

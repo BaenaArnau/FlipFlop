@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bm26ta8ii36v1"]
 
 [ext_resource type="Shader" uid="uid://bhsgahjyq4ki2" path="res://shaders/DeadMenu.gdshader" id="1_8cogc"]
+[ext_resource type="Theme" uid="uid://b7hkdopgliwwu" path="res://theme/main_theme.tres" id="1_l13gh"]
 [ext_resource type="Script" uid="uid://dbes6sxxmfnjo" path="res://scripts/Menus/DeadMenu.cs" id="1_lg4q5"]
+[ext_resource type="FontFile" uid="uid://diejaiwsmiiej" path="res://theme/Fuente/Astron Boy Video.otf" id="4_ebctp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8cogc"]
 shader = ExtResource("1_8cogc")
@@ -15,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_l13gh")
 script = ExtResource("1_lg4q5")
 _deathMessageLabelPath = NodePath("VBoxContainer/DeadMensaje")
 _continueButton = NodePath("VBoxContainer/continue")
@@ -54,7 +57,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DeadMensaje" type="Label" parent="VBoxContainer" unique_id=7808434]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_ebctp")
 horizontal_alignment = 1
 vertical_alignment = 1
 

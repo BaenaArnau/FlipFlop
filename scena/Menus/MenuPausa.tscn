@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dssfva0ebrpvd"]
 
 [ext_resource type="Script" uid="uid://ca0e7j2eqj4tq" path="res://scripts/Menus/MenuPausa.cs" id="1_nus5q"]
+[ext_resource type="Theme" uid="uid://b7hkdopgliwwu" path="res://theme/main_theme.tres" id="1_tue5e"]
 [ext_resource type="PackedScene" uid="uid://bs020765jqkky" path="res://scena/Menus/OptionsMenu.tscn" id="2_tue5e"]
 
 [node name="MenuPausa" type="Control" unique_id=2114205393 node_paths=PackedStringArray("_optionsMenu", "_returnButton", "_exitButton", "_settingsButton")]
@@ -11,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme = ExtResource("1_tue5e")
 script = ExtResource("1_nus5q")
 _optionsMenu = NodePath("OptionsMenu")
 _returnButton = NodePath("VBoxContainer/Return")

@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://drhx0he2ogy1x"]
 
 [ext_resource type="Script" uid="uid://ctre2nn4rjvqw" path="res://scripts/Menus/MainMenu.cs" id="1_nhm40"]
+[ext_resource type="FontFile" uid="uid://cbt4834kviwbp" path="res://theme/Fuente/Astron Boy Italic.otf" id="1_ujwt3"]
 [ext_resource type="PackedScene" uid="uid://bs020765jqkky" path="res://scena/Menus/OptionsMenu.tscn" id="2_ujwt3"]
+
+[sub_resource type="Theme" id="Theme_3vksp"]
+default_font = ExtResource("1_ujwt3")
+default_font_size = 24
 
 [node name="MainMenu" type="Control" unique_id=535371902 node_paths=PackedStringArray("_optionsMenu", "_playButton", "_exitButton", "_settingsButton")]
 layout_mode = 3
@@ -10,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_3vksp")
 script = ExtResource("1_nhm40")
 _optionsMenu = NodePath("OptionsMenu")
 _playButton = NodePath("VBoxContainer/Play")
