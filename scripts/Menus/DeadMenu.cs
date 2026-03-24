@@ -17,7 +17,10 @@ namespace FlipFlop.Scripts.Menus
 		[Export] private Button _continueButton;
 		[Export] private Button _exitButton;
 		
-		// Called when the node enters the scene tree for the first time.
+		/// <summary>
+		/// Metodo de inicialización del menú de muerte.
+		/// Se ejecuta cuando el nodo entra en el árbol de escena.
+		/// </summary>
 		public override void _Ready()
 		{
 			SetProcess(false);
@@ -25,7 +28,12 @@ namespace FlipFlop.Scripts.Menus
 			LoadRandomDeathMessage();
 			InitializeShader();
 		}
-
+		
+		/// <summary>
+		/// Procesamiento por frame del menú de muerte.
+		/// Se ejecuta cada frame después de _PhysicsProcess.
+		/// </summary>
+		/// <param name="delta"></param>
 		public override void _Process(double delta)
 		{
 			if (_isAppearing && _shaderMaterial != null)
@@ -41,7 +49,10 @@ namespace FlipFlop.Scripts.Menus
 				_shaderMaterial.SetShaderParameter("progress", _appearProgress);
 			}
 		}
-
+		
+		/// <summary>
+		/// Inicializa el ShaderMaterial del ColorRect para la animación de aparición.
+		/// </summary>
 		private void InitializeShader()
 		{
 			// Obtener el ColorRect hijo
@@ -59,6 +70,9 @@ namespace FlipFlop.Scripts.Menus
 			}
 		}
 
+		/// <summary>
+		/// Carga un mensaje de muerte aleatorio desde un archivo CSV y lo asigna al Label correspondiente.
+		/// </summary>
 		private void LoadRandomDeathMessage()
 		{
 			if (_deathMessageLabel == null)
@@ -105,6 +119,10 @@ namespace FlipFlop.Scripts.Menus
 			}
 		}
 		
+		/// <summary>
+		/// Cambia la visibilidad del menú de muerte y controla la animación de aparición.
+		/// </summary>
+		/// <param name="visible">Booleano que nos dice si está visible el objeto o no</param>
 		public void ChangeVisibility(bool visible)
 		{
 			Visible = visible;
@@ -129,13 +147,19 @@ namespace FlipFlop.Scripts.Menus
 			}
 		}
 		
+		/// <summary>
+		/// Reinicia la escena actual para continuar jugando después de morir.
+		/// </summary>
 		public void OnContinuePressed()
 		{
 			ButtonTools.PlayPressAnimation(
 				_continueButton,
 				() => { GetTree().ReloadCurrentScene(); });
 		}
-
+		
+		/// <summary>
+		/// Regresa al menú principal desde el menú de muerte.
+		/// </summary>
 		public void OnExitPressed()
 		{
 			ButtonTools.PlayPressAnimation(
