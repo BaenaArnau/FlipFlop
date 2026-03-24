@@ -24,12 +24,12 @@ namespace FlipFlop.Scripts.Player
 		/// Indica si el jugador está muerto
 		/// </summary>
 		public bool IsDead = false;
-		private bool _deathHandled = false;
+		private bool _deathHandled;
 
 		/// <summary>
 		/// Indica si el jugador ha realizado movimiento horizontal desde el inicio de la partida
 		/// </summary>
-		private bool _hasMoved = false;
+		private bool _hasMoved;
 
 		/// <summary>
 		/// Referencia al área de gravedad que controla la inversión de gravedad
@@ -148,7 +148,7 @@ namespace FlipFlop.Scripts.Player
 		/// <summary>
 		/// Indica si el jugador se ha movido desde el inicio de la partida.
 		/// </summary>
-		/// <returns>true si el jugador ha presionado alguna tecla de movimiento, false si no</returns>
+		/// <returns>Verdadero si el jugador ha presionado alguna tecla de movimiento, falso si no</returns>
 		public bool HasMoved()
 		{
 			return _hasMoved;

@@ -10,12 +10,12 @@ namespace FlipFlop.Scripts.Menus
     public partial class OptionsMenu : Control
     {
         [ExportGroup("References")]
-        [Export] private MenuPausa _puaseMenu = null;
+        [Export] private MenuPausa _puaseMenu;
         
         /// <summary>
         /// Referencia al menú principal para volver a él
         /// </summary>
-        [Export] private MainMenu _mainMenu = null;
+        [Export] private MainMenu _mainMenu;
         
         /// <summary>
         /// Botón selector de anti-aliasing (Off, FXAA, TAA, MSAA 2x/4x/8x)
@@ -142,7 +142,7 @@ namespace FlipFlop.Scripts.Menus
         /// <summary>
         /// Indica si el bloqueo de FPS está activado
         /// </summary>
-        private bool _isFpslock = false;
+        private bool _isFpslock;
 
         /// <summary>
         /// Valor actual del FPS máximo cuando está bloqueado

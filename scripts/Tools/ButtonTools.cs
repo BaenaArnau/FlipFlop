@@ -42,9 +42,9 @@ namespace FlipFlop.scripts.Tools
         /// <summary>
         /// Reproduce una animación de "press" en el botón: se encoge, rebota y vuelve a su tamaño original.
         /// La animación tiene tres fases:
-        /// 1. Encogimiento (10ms)
-        /// 2. Rebote hacia arriba (12ms)
-        /// 3. Estabilización (8ms)
+        /// 1. Encogimiento (10 ms)
+        /// 2. Rebote hacia arriba (12 ms)
+        /// 3. Estabilización (8 ms)
         /// Ejecuta el callback <paramref name="onFinished"/> al terminar la animación.
         /// </summary>
         /// <param name="button">Control (botón) al que aplicar la animación</param>

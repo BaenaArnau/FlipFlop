@@ -1,5 +1,4 @@
 using Godot;
-using System;
 using FlipFlop.scripts.Tools;
 
 namespace FlipFlop.Scripts.Menus
@@ -8,11 +7,11 @@ namespace FlipFlop.Scripts.Menus
 	{
 		[Export] private NodePath _deathMessageLabelPath;
 		private Label _deathMessageLabel;
-		[Export] private float AppearDuration = 1.5f;
-		private const string CSV_PATH = "res://files/DeadMensaje.csv";
+		[Export] private float _appearDuration = 1.5f;
+		private const string CsvPath = "res://files/DeadMensaje.csv";
 		private ShaderMaterial _shaderMaterial;
-		private float _appearProgress = 0.0f;
-		private bool _isAppearing = false;
+		private float _appearProgress;
+		private bool _isAppearing;
 		
 		[ExportGroup("Buttons")]
 		[Export] private Button _continueButton;
@@ -31,7 +30,7 @@ namespace FlipFlop.Scripts.Menus
 		{
 			if (_isAppearing && _shaderMaterial != null)
 			{
-				_appearProgress += (float)delta / AppearDuration;
+				_appearProgress += (float)delta / _appearDuration;
 				
 				if (_appearProgress >= 1.0f)
 				{
@@ -68,10 +67,10 @@ namespace FlipFlop.Scripts.Menus
 				return;
 			}
 
-			var file = FileAccess.Open(CSV_PATH, FileAccess.ModeFlags.Read);
+			var file = FileAccess.Open(CsvPath, FileAccess.ModeFlags.Read);
 			if (file == null)
 			{
-				GD.PrintErr($"No se pudo abrir el archivo: {CSV_PATH}");
+				GD.PrintErr($"No se pudo abrir el archivo: {CsvPath}");
 				return;
 			}
 

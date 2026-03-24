@@ -25,3 +25,8 @@ sprite_frames = SubResource("SpriteFrames_h4ded")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1245341607]
 shape = SubResource("RectangleShape2D_e8o1h")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=37222759]
+limit_left = 0
+limit_top = 0
+limit_bottom = 1440

@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://bm26ta8ii36v1" path="res://scena/Menus/DeadMenu.tscn" id="5_tdyg5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofqst"]
-size = Vector2(1183, 668)
+size = Vector2(2567.5, 1438)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0376q"]
-size = Vector2(1162, 20)
+size = Vector2(2561, 114)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pupwf"]
 size = Vector2(133, 134)
@@ -28,36 +28,37 @@ script = ExtResource("1_f2262")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gravity" unique_id=319852065]
 modulate = Color(1, 0.14117648, 1, 1)
+position = Vector2(692.25, 385)
 shape = SubResource("RectangleShape2D_ofqst")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=25919300]
 position = Vector2(577, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=661829453]
-position = Vector2(1, 1)
+position = Vector2(729, -9)
 shape = SubResource("RectangleShape2D_0376q")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1911478616]
-position = Vector2(577, 3)
+position = Vector2(571, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1901527268]
-position = Vector2(7, 645)
+position = Vector2(700.5, 1427)
 shape = SubResource("RectangleShape2D_0376q")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1971353661]
-position = Vector2(577, 3)
+position = Vector2(-376, -76)
 rotation = 1.5707964
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1934085540]
-position = Vector2(274.00003, 569)
+position = Vector2(254.99998, -354)
 shape = SubResource("RectangleShape2D_0376q")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=621579064]
-position = Vector2(577, 3)
+position = Vector2(642, 3)
 rotation = 1.5707964
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1211681691]
-position = Vector2(194.99997, -585)
+position = Vector2(239.99991, -1922)
 shape = SubResource("RectangleShape2D_0376q")
 
 [node name="Player" parent="." unique_id=425336149 node_paths=PackedStringArray("_deadMenu") instance=ExtResource("2_p863f")]
@@ -92,4 +93,3 @@ shape = SubResource("RectangleShape2D_p23x2")
 
 [node name="DeadMenu" parent="." unique_id=181698476 instance=ExtResource("5_tdyg5")]
 visible = false
-

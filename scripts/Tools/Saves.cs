@@ -40,7 +40,7 @@ namespace FlipFlop.scripts.Tools
         /// <summary>
         /// Archivo de configuración de Godot para almacenar datos
         /// </summary>
-        ConfigFile config = new ConfigFile();
+        readonly ConfigFile _config = new ConfigFile();
 
         /// <summary>
         /// Constructor del sistema de guardado.
@@ -74,11 +74,11 @@ namespace FlipFlop.scripts.Tools
         {
             try
             {
-                config.Load(filename);
+                _config.Load(filename);
             }
             catch (Exception)
             {
-                config.Save(filename);
+                _config.Save(filename);
             }
         }
 
@@ -110,20 +110,20 @@ namespace FlipFlop.scripts.Tools
             double enviroment,
             double uisound)
         {
-            config.SetValue("Video", "antialiasing", antialiasing);
-            config.SetValue("Video", "vsync", vsync);
-            config.SetValue("Video", "screen", screen);
-            config.SetValue("Video", "fpslock", fpslock);
-            config.SetValue("Video", "fps_value", fpsValue);
-            config.SetValue("Video", "shadows", shadows);
+            _config.SetValue("Video", "antialiasing", antialiasing);
+            _config.SetValue("Video", "vsync", vsync);
+            _config.SetValue("Video", "screen", screen);
+            _config.SetValue("Video", "fpslock", fpslock);
+            _config.SetValue("Video", "fps_value", fpsValue);
+            _config.SetValue("Video", "shadows", shadows);
 
-            config.SetValue("Sound", "master", master);
-            config.SetValue("Sound", "music", music);
-            config.SetValue("Sound", "soundfx", soundfx);
-            config.SetValue("Sound", "enviroment", enviroment);
-            config.SetValue("Sound", "uisound", uisound);
+            _config.SetValue("Sound", "master", master);
+            _config.SetValue("Sound", "music", music);
+            _config.SetValue("Sound", "soundfx", soundfx);
+            _config.SetValue("Sound", "enviroment", enviroment);
+            _config.SetValue("Sound", "uisound", uisound);
 
-            config.Save("user://settings.cfg");
+            _config.Save("user://settings.cfg");
         }
 
         /// <summary>
@@ -134,17 +134,17 @@ namespace FlipFlop.scripts.Tools
         public OptionsData LoadOptions()
         {
             return new OptionsData(
-                (int)config.GetValue("Video", "antialiasing", 0),
-                (int)config.GetValue("Video", "vsync", 0),
-                (int)config.GetValue("Video", "screen", 0),
-                (int)config.GetValue("Video", "fpslock", 0),
-                (int)config.GetValue("Video", "fps_value", 60),
-                (int)config.GetValue("Video", "shadows", 0),
-                (float)(double)config.GetValue("Sound", "master", 1.0),
-                (float)(double)config.GetValue("Sound", "music", 1.0),
-                (float)(double)config.GetValue("Sound", "soundfx", 1.0),
-                (float)(double)config.GetValue("Sound", "enviroment", 1.0),
-                (float)(double)config.GetValue("Sound", "uisound", 1.0)
+                (int)_config.GetValue("Video", "antialiasing", 0),
+                (int)_config.GetValue("Video", "vsync", 0),
+                (int)_config.GetValue("Video", "screen", 0),
+                (int)_config.GetValue("Video", "fpslock", 0),
+                (int)_config.GetValue("Video", "fps_value", 60),
+                (int)_config.GetValue("Video", "shadows", 0),
+                (float)(double)_config.GetValue("Sound", "master", 1.0),
+                (float)(double)_config.GetValue("Sound", "music", 1.0),
+                (float)(double)_config.GetValue("Sound", "soundfx", 1.0),
+                (float)(double)_config.GetValue("Sound", "enviroment", 1.0),
+                (float)(double)_config.GetValue("Sound", "uisound", 1.0)
             );
         }
     }

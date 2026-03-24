@@ -15,6 +15,11 @@ run/main_scene="uid://drhx0he2ogy1x"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+
 [dotnet]
 
 project/assembly_name="FlipFlop"
