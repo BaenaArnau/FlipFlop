@@ -66,7 +66,7 @@ namespace FlipFlop.Scripts.Menus
 	    {
 		    ButtonTools.PlayPressAnimation(
 			    _playButton,
-			    () => { GetTree().ChangeSceneToFile("res://scena/Maps/main.tscn"); });
+			    () => { GetTree().ChangeSceneToFile("res://scena/Maps/mapa2.tscn"); });
 	    }
 
 	    /// <summary>

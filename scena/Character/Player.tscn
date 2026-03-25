@@ -18,6 +18,7 @@ animations = [{
 size = Vector2(128, 128)
 
 [node name="Player" type="CharacterBody2D" unique_id=425336149]
+collision_layer = 5
 script = ExtResource("1_qphiy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1122080824]
@@ -29,4 +30,5 @@ shape = SubResource("RectangleShape2D_e8o1h")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=37222759]
 limit_left = 0
 limit_top = 0
+limit_right = 2560
 limit_bottom = 1440

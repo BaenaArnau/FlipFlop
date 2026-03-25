@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d4etc1npeqxhp"]
+
+[ext_resource type="Script" uid="uid://nkl3vfdmtuir" path="res://scripts/trap/SierraTile.cs" id="1_w4g2w"]
+[ext_resource type="Texture2D" uid="uid://cg11d0p8yhvlp" path="res://assets/Tiled/Img/Sierra.png" id="2_3sf7n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_suef0"]
+radius = 30.016663
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dewvn"]
+radius = 32.140316
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=581401454 node_paths=PackedStringArray("_sierraSprite")]
+script = ExtResource("1_w4g2w")
+_sierraSprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2019123570]
+position = Vector2(33, 32)
+texture = ExtResource("2_3sf7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=352227025]
+position = Vector2(33, 32)
+shape = SubResource("CircleShape2D_suef0")
+
+[node name="DeadArea" type="Area2D" parent="." unique_id=2065380255]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeadArea" unique_id=1193079159]
+position = Vector2(33, 32)
+shape = SubResource("CircleShape2D_dewvn")
+debug_color = Color(0.9879555, 0, 0.31246254, 0.41960785)
+
+[connection signal="body_entered" from="DeadArea" to="." method="OnBodyEntered"]

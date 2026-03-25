@@ -24,6 +24,10 @@ window/size/viewport_height=1440
 
 project/assembly_name="FlipFlop"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/YATI/YATI-d51f742fc32d4e77799851f319b2815b0806928d/GDScript/addons/YATI/plugin.cfg")
+
 [input]
 
 move_left={

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tileset version="1.10" tiledversion="1.12.0" name="Pincho" class="area" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+ <properties>
+  <property name="godot_script" value="res://scripts/trap/PinchoTile.cs"/>
+ </properties>
+ <image source="../Img/Pinchos.png" width="32" height="32"/>
+ <tile id="0" type="area">
+  <objectgroup draworder="index" id="2">
+   <object id="1" name="PinchosC" type="area" x="0" y="0" width="32" height="32"/>
+  </objectgroup>
+ </tile>
+</tileset>
