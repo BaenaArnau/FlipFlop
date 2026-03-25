@@ -1,0 +1,65 @@
+{
+    "activeFile": "Mapa/Mapa2.tmx",
+    "expandedProjectPaths": [
+        "Mapa",
+        "Objectos",
+        "TileMap",
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Mapa/Mapa1.tmx": {
+            "scale": 1.5526562499999998,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 479.82288417027274,
+                "y": 319.7745798530744
+            }
+        },
+        "Mapa/Mapa2.tmx": {
+            "expandedObjectLayers": [
+                6,
+                5,
+                4
+            ],
+            "scale": 1.1886,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 208.64883055695776,
+                "y": 320.9658421672556
+            }
+        },
+        "TileMap/Bola.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TileMap/Pincho.tsx": {
+            "scaleInDock": 1
+        },
+        "TileMap/Sierra.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TileMap/TileMap.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "/home/dev/FlipFlop (2)/FlipFlop/assets/Tiled/Img",
+    "last.objectTemplatePath": "/home/dev/FlipFlop (2)/FlipFlop/assets/Tiled/Objectos",
+    "last.worldFilePath": "/home/dev/FlipFlop (2)/FlipFlop-Menus/assets/Tiled/Mapa",
+    "openFiles": [
+        "Mapa/Mapa2.tmx",
+        "TileMap/Bola.tsx"
+    ],
+    "project": "Tiled.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "TileMap/Bola.tsx",
+        "Mapa/Mapa2.tmx",
+        "TileMap/TileMap.tsx",
+        "TileMap/Sierra.tsx",
+        "Mapa/Mapa1.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}

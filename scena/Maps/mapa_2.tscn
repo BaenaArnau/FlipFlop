@@ -1,0 +1,538 @@
+[gd_scene load_steps=8 format=3 uid="uid://07bjpbsfo3ys"]
+
+[ext_resource type="PackedScene" uid="uid://6qdharmq6r6b" path="res://assets/Tiled/Mapa/Mapa2.tmx" id="1_npxlu"]
+[ext_resource type="PackedScene" uid="uid://c70oaut5dmori" path="res://scena/Character/Player.tscn" id="2_g7d84"]
+[ext_resource type="Script" uid="uid://dhb7kyxijsaj2" path="res://scripts/trap/Gravity.cs" id="3_hwkh2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vpdt"]
+size = Vector2(1183, 668)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwkh2"]
+size = Vector2(34, 34)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hwkh2"]
+radius = 31.016125
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3kk5"]
+size = Vector2(34, 34)
+
+[node name="Mapa2" instance=ExtResource("1_npxlu")]
+
+[node name="Gravity" type="Area2D" parent="." index="0"]
+modulate = Color(1, 0.14117648, 1, 1)
+position = Vector2(584, 328)
+collision_mask = 5
+gravity_space_override = 3
+script = ExtResource("3_hwkh2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gravity" index="0"]
+modulate = Color(1, 0.14117648, 1, 1)
+position = Vector2(-4, 6)
+shape = SubResource("RectangleShape2D_4vpdt")
+
+[node name="Bolas" parent="." index="3"]
+z_index = 2
+
+[node name="DeadArea" type="Area2D" parent="Bolas/Bola_tile" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bolas/Bola_tile/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Bolas/Bola_tile2" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bolas/Bola_tile2/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Bolas/Bola_tile3" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bolas/Bola_tile3/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Bolas/Bola_tile4" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bolas/Bola_tile4/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Bolas/Bola_tile5" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bolas/Bola_tile5/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Bolas/Bola_tile6" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bolas/Bola_tile6/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Bolas/Bola_tile7" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bolas/Bola_tile7/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Bolas/Bola_tile8" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bolas/Bola_tile8/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Bolas/Bola_tile9" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bolas/Bola_tile9/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="Sierras" parent="." index="4"]
+z_index = 2
+
+[node name="DeadArea" type="Area2D" parent="Sierras/Sierra_tile" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sierras/Sierra_tile/DeadArea" index="0"]
+position = Vector2(33, -32)
+shape = SubResource("CircleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Sierras/Sierra_tile2" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sierras/Sierra_tile2/DeadArea" index="0"]
+position = Vector2(33, -32)
+shape = SubResource("CircleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Sierras/Sierra_tile3" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sierras/Sierra_tile3/DeadArea" index="0"]
+position = Vector2(33, -32)
+shape = SubResource("CircleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Sierras/Sierra_tile4" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sierras/Sierra_tile4/DeadArea" index="0"]
+position = Vector2(33, -32)
+shape = SubResource("CircleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Sierras/Sierra_tile5" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sierras/Sierra_tile5/DeadArea" index="0"]
+position = Vector2(33, -32)
+shape = SubResource("CircleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Sierras/Sierra_tile6" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sierras/Sierra_tile6/DeadArea" index="0"]
+position = Vector2(33, -32)
+shape = SubResource("CircleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Sierras/Sierra_tile7" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sierras/Sierra_tile7/DeadArea" index="0"]
+position = Vector2(33, -32)
+shape = SubResource("CircleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Sierras/Sierra_tile8" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sierras/Sierra_tile8/DeadArea" index="0"]
+position = Vector2(33, -32)
+shape = SubResource("CircleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Sierras/Sierra_tile9" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sierras/Sierra_tile9/DeadArea" index="0"]
+position = Vector2(33, -32)
+shape = SubResource("CircleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Sierras/Sierra_tile10" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sierras/Sierra_tile10/DeadArea" index="0"]
+position = Vector2(33, -32)
+shape = SubResource("CircleShape2D_hwkh2")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="Pinchos" parent="." index="5"]
+z_index = 2
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile2" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile2/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile3" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile3/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile4" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile4/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile5" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile5/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile6" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile6/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile7" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile7/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile8" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile8/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile9" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile9/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile10" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile10/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile11" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile11/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile12" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile12/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile13" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile13/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile14" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile14/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile15" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile15/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile16" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile16/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile17" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile17/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile18" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile18/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile19" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile19/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile20" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile20/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile21" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile21/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile22" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile22/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile23" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile23/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile24" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile24/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile25" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile25/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile26" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile26/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile27" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile27/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile28" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile28/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile29" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile29/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="DeadArea" type="Area2D" parent="Pinchos/Pinchos_tile30" index="2"]
+z_index = 3
+z_as_relative = false
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinchos/Pinchos_tile30/DeadArea" index="0"]
+position = Vector2(17, -16)
+shape = SubResource("RectangleShape2D_w3kk5")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="Player" parent="." index="6" instance=ExtResource("2_g7d84")]
+z_index = 1
+position = Vector2(42, 454)
+_areaGravityPath = NodePath("../Gravity")
+
+[connection signal="body_entered" from="Gravity" to="Gravity" method="OnBodyEntered"]
+[connection signal="body_exited" from="Gravity" to="Gravity" method="OnBodyExited"]
