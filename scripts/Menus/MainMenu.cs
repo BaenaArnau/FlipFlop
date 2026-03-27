@@ -1,5 +1,4 @@
 using Godot;
-using System;
 using FlipFlop.scripts.Tools;
 
 namespace FlipFlop.Scripts.Menus
@@ -56,7 +55,7 @@ namespace FlipFlop.Scripts.Menus
 	    public void OnSettingsPressed()
 	    {
 		    ButtonTools.PlayPressAnimation(
-			    _exitButton,
+			    _settingsButton,
 			    () => { Visibilities(); });
 	    }
 
@@ -66,8 +65,8 @@ namespace FlipFlop.Scripts.Menus
 	    public void OnPlayPressed()
 	    {
 		    ButtonTools.PlayPressAnimation(
-			    _exitButton,
-			    () => { GetTree().ChangeSceneToFile("res://scena/Maps/mapa_2.tscn"); });
+			    _playButton,
+			    () => { GetTree().ChangeSceneToFile("res://scena/Maps/mapa1.tscn"); });
 	    }
 
 	    /// <summary>
@@ -81,7 +80,7 @@ namespace FlipFlop.Scripts.Menus
 	    }
 
 	    /// <summary>
-	    /// Alterna la visibilidad de los botones del menú principal y del menú de opciones.
+	    /// Alterna la visibilidad de los botones del menú principal y del menú de opciones soy gay.
 	    /// </summary>
 	    internal void Visibilities()
 	    {
