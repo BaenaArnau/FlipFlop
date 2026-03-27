@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://cx8yjwy0c3a6s"]
+[gd_scene load_steps=8 format=4 uid="uid://be2k1xtjif5nl"]
 
 [ext_resource type="Script" uid="uid://dhb7kyxijsaj2" path="res://scripts/trap/Gravity.cs" id="1_c0dv8"]
 [ext_resource type="Texture2D" uid="uid://car846b2ib2xh" path="res://assets/Tiled/Img/TileMap.png" id="2_rg68k"]
@@ -693,7 +693,7 @@ position = Vector2(74, 1213)
 _areaGravityPath = NodePath("../Gravity")
 
 [node name="Warp" parent="." instance=ExtResource("3_m7ym3")]
-position = Vector2(2311, 1075)
+position = Vector2(2426.0002, 1075)
 scale = Vector2(5, 5)
 
 [connection signal="body_entered" from="Gravity" to="Gravity" method="OnBodyEntered"]
