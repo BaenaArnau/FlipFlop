@@ -14,6 +14,9 @@ namespace FlipFlop.Scripts.Player
 		private bool _hasMoved;
 		private bool _gravityFlipped = false;
 
+		[Export] private AudioStreamPlayer2D _sound;
+		[Export] private AudioStreamPlayer2D _teleport;
+
 		[Export] private NodePath _areaGravityPath;
 		private Gravity _areaGravity;
 		
@@ -23,6 +26,8 @@ namespace FlipFlop.Scripts.Player
 
 		public override void _Ready()
 		{
+			_hasMoved = false;
+			
 			if (_areaGravityPath != null)
 			{
 				_areaGravity = GetNode<Gravity>(_areaGravityPath);
@@ -83,6 +88,8 @@ namespace FlipFlop.Scripts.Player
 				_gravityFlipped = !_gravityFlipped;
 				_hasMoved = true;
 
+				_teleport.Play();
+				
 				if (_animatedSprite != null)
 				{
 					_animatedSprite.FlipV = _gravityFlipped;
@@ -93,14 +100,17 @@ namespace FlipFlop.Scripts.Player
 		private Vector2 _handleMovement(Vector2 velocity)
 		{
 			float direction = Input.GetAxis("move_left", "move_rigth");
+			
 			if (direction != 0)
 			{
 				velocity.X = direction * Speed;
+				_sound.Play();
 				_hasMoved = true;
 			}
 			else
 			{
 				velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+				_sound.Stop();
 			}
 			return velocity;
 		}

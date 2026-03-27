@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx74f7nj7jb8n"
-path="res://.godot/imported/protaRun.png-c439fd765412f8f645ab87e7d05cc9c5.ctex"
+uid="uid://0mv81gxsidbi"
+path="res://.godot/imported/icon_128x128.png-f8c368170628f89e1f461b8c00c04bdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Prota/protaRun.png"
-dest_files=["res://.godot/imported/protaRun.png-c439fd765412f8f645ab87e7d05cc9c5.ctex"]
+source_file="res://assets/icon_128x128.png"
+dest_files=["res://.godot/imported/icon_128x128.png-f8c368170628f89e1f461b8c00c04bdb.ctex"]
 
 [params]
 
