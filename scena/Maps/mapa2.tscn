@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://battnxdgd5lwm"]
+[gd_scene load_steps=17 format=4 uid="uid://battnxdgd5lwm"]
 
 [ext_resource type="Script" uid="uid://dhb7kyxijsaj2" path="res://scripts/trap/Gravity.cs" id="1_ap5x1"]
 [ext_resource type="Texture2D" uid="uid://car846b2ib2xh" path="res://assets/Tiled/Img/TileMap.png" id="2_8gy00"]
@@ -581,23 +581,14 @@ texture_region_size = Vector2i(32, 32)
 15:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
 6:9/0 = 0
 1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:7/0 = 0
-2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:7/0 = 0
-3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:8/0 = 0
-1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:8/0 = 0
-2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:8/0 = 0
-3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:9/0 = 0
-1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:9/0 = 0
-2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:9/0 = 0
-3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcrno"]
 texture = ExtResource("3_nj0vv")
@@ -634,21 +625,21 @@ sources/2 = SubResource("TileSetAtlasSource_6l617")
 sources/3 = SubResource("TileSetAtlasSource_tohrp")
 metadata/godot_script = "res://scripts/trap/PinchoTile.cs"
 
-[node name="Node" type="Node" unique_id=760690512]
+[node name="Node" type="Node"]
 
-[node name="Gravity" type="Area2D" parent="." unique_id=373166156]
+[node name="Gravity" type="Area2D" parent="."]
 modulate = Color(1, 0.14117648, 1, 1)
 position = Vector2(584, 328)
 collision_mask = 7
 gravity_space_override = 2
 script = ExtResource("1_ap5x1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gravity" unique_id=1857438734]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gravity"]
 modulate = Color(1, 0.14117648, 1, 1)
 position = Vector2(663.5, 356)
 shape = SubResource("RectangleShape2D_1blsv")
 
-[node name="Fondo" type="TileMapLayer" parent="." unique_id=549382735]
+[node name="Fondo" type="TileMapLayer" parent="."]
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAAAAAAAAAAGAAkAAAABAAAAAAAGAAkAAAACAAAAAAAGAAkAAAADAAAAAAAGAAkAAAAEAAAAAAAGAAkAAAAFAAAAAAAGAAkAAAAGAAAAAAAGAAkAAAAHAAAAAAAGAAkAAAAIAAAAAAAGAAkAAAAJAAAAAAAGAAkAAAAKAAAAAAAGAAkAAAALAAAAAAAGAAkAAAAMAAAAAAAGAAkAAAANAAAAAAAGAAkAAAAOAAAAAAAGAAkAAAAPAAAAAAAGAAkAAAAQAAAAAAAGAAkAAAARAAAAAAAGAAkAAAASAAAAAAAGAAkAAAATAAAAAAAGAAkAAAAUAAAAAAAGAAkAAAAVAAAAAAAGAAkAAAAWAAAAAAAGAAkAAAAXAAAAAAAGAAkAAAAYAAAAAAAGAAkAAAAZAAAAAAAGAAkAAAAaAAAAAAAGAAkAAAAbAAAAAAAGAAkAAAAcAAAAAAAGAAkAAAAdAAAAAAAGAAkAAAAAAAEAAAAGAAkAAAABAAEAAAAGAAkAAAACAAEAAAAGAAkAAAADAAEAAAAGAAkAAAAEAAEAAAAGAAkAAAAFAAEAAAAGAAkAAAAGAAEAAAAGAAkAAAAHAAEAAAAGAAkAAAAIAAEAAAAGAAkAAAAJAAEAAAAGAAkAAAAKAAEAAAAGAAkAAAALAAEAAAAGAAkAAAAMAAEAAAAGAAkAAAANAAEAAAAGAAkAAAAOAAEAAAAGAAkAAAAPAAEAAAAGAAkAAAAQAAEAAAAGAAkAAAARAAEAAAAGAAkAAAASAAEAAAAGAAkAAAATAAEAAAAGAAkAAAAUAAEAAAAGAAkAAAAVAAEAAAAGAAkAAAAWAAEAAAAGAAkAAAAXAAEAAAAGAAkAAAAYAAEAAAAGAAkAAAAZAAEAAAAGAAkAAAAaAAEAAAAGAAkAAAAbAAEAAAAGAAkAAAAcAAEAAAAGAAkAAAAdAAEAAAAGAAkAAAAAAAIAAAAGAAkAAAABAAIAAAAGAAkAAAACAAIAAAAGAAkAAAADAAIAAAAGAAkAAAAEAAIAAAAGAAkAAAAFAAIAAAAGAAkAAAAGAAIAAAAGAAkAAAAHAAIAAAAGAAkAAAAIAAIAAAAGAAkAAAAJAAIAAAAGAAkAAAAKAAIAAAAGAAkAAAALAAIAAAAGAAkAAAAMAAIAAAAGAAkAAAANAAIAAAAGAAkAAAAOAAIAAAAGAAkAAAAPAAIAAAAGAAkAAAAQAAIAAAAGAAkAAAARAAIAAAAGAAkAAAASAAIAAAAGAAkAAAATAAIAAAAGAAkAAAAUAAIAAAAGAAkAAAAVAAIAAAAGAAkAAAAWAAIAAAAGAAkAAAAXAAIAAAAGAAkAAAAYAAIAAAAGAAkAAAAZAAIAAAAGAAkAAAAaAAIAAAAGAAkAAAAbAAIAAAAGAAkAAAAcAAIAAAAGAAkAAAAdAAIAAAAGAAkAAAAAAAMAAAAGAAkAAAABAAMAAAAGAAkAAAACAAMAAAAGAAkAAAADAAMAAAAGAAkAAAAEAAMAAAAGAAkAAAAFAAMAAAAGAAkAAAAGAAMAAAAGAAkAAAAHAAMAAAAGAAkAAAAIAAMAAAAGAAkAAAAJAAMAAAAGAAkAAAAKAAMAAAAGAAkAAAALAAMAAAAGAAkAAAAMAAMAAAAGAAkAAAANAAMAAAAGAAkAAAAOAAMAAAAGAAkAAAAPAAMAAAAGAAkAAAAQAAMAAAAGAAkAAAARAAMAAAAGAAkAAAASAAMAAAAGAAkAAAATAAMAAAAGAAkAAAAUAAMAAAAGAAkAAAAVAAMAAAAGAAkAAAAWAAMAAAAGAAkAAAAXAAMAAAAGAAkAAAAYAAMAAAAGAAkAAAAZAAMAAAAGAAkAAAAaAAMAAAAGAAkAAAAbAAMAAAAGAAkAAAAcAAMAAAAGAAkAAAAdAAMAAAAGAAkAAAAAAAQAAAAGAAkAAAABAAQAAAAGAAkAAAACAAQAAAAGAAkAAAADAAQAAAAGAAkAAAAEAAQAAAAGAAkAAAAFAAQAAAAGAAkAAAAGAAQAAAAGAAkAAAAHAAQAAAAGAAkAAAAIAAQAAAAGAAkAAAAJAAQAAAAGAAkAAAAKAAQAAAAGAAkAAAALAAQAAAAGAAkAAAAMAAQAAAAGAAkAAAANAAQAAAAGAAkAAAAOAAQAAAAGAAkAAAAPAAQAAAAGAAkAAAAQAAQAAAAGAAkAAAARAAQAAAAGAAkAAAASAAQAAAAGAAkAAAATAAQAAAAGAAkAAAAUAAQAAAAGAAkAAAAVAAQAAAAGAAkAAAAWAAQAAAAGAAkAAAAXAAQAAAAGAAkAAAAYAAQAAAAGAAkAAAAZAAQAAAAGAAkAAAAaAAQAAAAGAAkAAAAbAAQAAAAGAAkAAAAcAAQAAAAGAAkAAAAdAAQAAAAGAAkAAAAAAAUAAAAGAAkAAAABAAUAAAAGAAkAAAACAAUAAAAGAAkAAAADAAUAAAAGAAkAAAAEAAUAAAAGAAkAAAAFAAUAAAAGAAkAAAAGAAUAAAAGAAkAAAAHAAUAAAAGAAkAAAAIAAUAAAAGAAkAAAAJAAUAAAAGAAkAAAAKAAUAAAAGAAkAAAALAAUAAAAGAAkAAAAMAAUAAAAGAAkAAAANAAUAAAAGAAkAAAAOAAUAAAAGAAkAAAAPAAUAAAAGAAkAAAAQAAUAAAAGAAkAAAARAAUAAAAGAAkAAAASAAUAAAAGAAkAAAATAAUAAAAGAAkAAAAUAAUAAAAGAAkAAAAVAAUAAAAGAAkAAAAWAAUAAAAGAAkAAAAXAAUAAAAGAAkAAAAYAAUAAAAGAAkAAAAZAAUAAAAGAAkAAAAaAAUAAAAGAAkAAAAbAAUAAAAGAAkAAAAcAAUAAAAGAAkAAAAdAAUAAAAGAAkAAAAAAAYAAAAGAAkAAAABAAYAAAAGAAkAAAACAAYAAAAGAAkAAAADAAYAAAAGAAkAAAAEAAYAAAAGAAkAAAAFAAYAAAAGAAkAAAAGAAYAAAAGAAkAAAAHAAYAAAAGAAkAAAAIAAYAAAAGAAkAAAAJAAYAAAAGAAkAAAAKAAYAAAAGAAkAAAALAAYAAAAGAAkAAAAMAAYAAAAGAAkAAAANAAYAAAAGAAkAAAAOAAYAAAAGAAkAAAAPAAYAAAAGAAkAAAAQAAYAAAAGAAkAAAARAAYAAAAGAAkAAAASAAYAAAAGAAkAAAATAAYAAAAGAAkAAAAUAAYAAAAGAAkAAAAVAAYAAAAGAAkAAAAWAAYAAAAGAAkAAAAXAAYAAAAGAAkAAAAYAAYAAAAGAAkAAAAZAAYAAAAGAAkAAAAaAAYAAAAGAAkAAAAbAAYAAAAGAAkAAAAcAAYAAAAGAAkAAAAdAAYAAAAGAAkAAAAAAAcAAAAGAAkAAAABAAcAAAAGAAkAAAACAAcAAAAGAAkAAAADAAcAAAAGAAkAAAAEAAcAAAAGAAkAAAAFAAcAAAAGAAkAAAAGAAcAAAAGAAkAAAAHAAcAAAAGAAkAAAAIAAcAAAAGAAkAAAAJAAcAAAAGAAkAAAAKAAcAAAAGAAkAAAALAAcAAAAGAAkAAAAMAAcAAAAGAAkAAAANAAcAAAAGAAkAAAAOAAcAAAAGAAkAAAAPAAcAAAAGAAkAAAAQAAcAAAAGAAkAAAARAAcAAAAGAAkAAAASAAcAAAAGAAkAAAATAAcAAAAGAAkAAAAUAAcAAAAGAAkAAAAVAAcAAAAGAAkAAAAWAAcAAAAGAAkAAAAXAAcAAAAGAAkAAAAYAAcAAAAGAAkAAAAZAAcAAAAGAAkAAAAaAAcAAAAGAAkAAAAbAAcAAAAGAAkAAAAcAAcAAAAGAAkAAAAdAAcAAAAGAAkAAAAAAAgAAAAGAAkAAAABAAgAAAAGAAkAAAACAAgAAAAGAAkAAAADAAgAAAAGAAkAAAAEAAgAAAAGAAkAAAAFAAgAAAAGAAkAAAAGAAgAAAAGAAkAAAAHAAgAAAAGAAkAAAAIAAgAAAAGAAkAAAAJAAgAAAAGAAkAAAAKAAgAAAAGAAkAAAALAAgAAAAGAAkAAAAMAAgAAAAGAAkAAAANAAgAAAAGAAkAAAAOAAgAAAAGAAkAAAAPAAgAAAAGAAkAAAAQAAgAAAAGAAkAAAARAAgAAAAGAAkAAAASAAgAAAAGAAkAAAATAAgAAAAGAAkAAAAUAAgAAAAGAAkAAAAVAAgAAAAGAAkAAAAWAAgAAAAGAAkAAAAXAAgAAAAGAAkAAAAYAAgAAAAGAAkAAAAZAAgAAAAGAAkAAAAaAAgAAAAGAAkAAAAbAAgAAAAGAAkAAAAcAAgAAAAGAAkAAAAdAAgAAAAGAAkAAAAAAAkAAAAGAAkAAAABAAkAAAAGAAkAAAACAAkAAAAGAAkAAAADAAkAAAAGAAkAAAAEAAkAAAAGAAkAAAAFAAkAAAAGAAkAAAAGAAkAAAAGAAkAAAAHAAkAAAAGAAkAAAAIAAkAAAAGAAkAAAAJAAkAAAAGAAkAAAAKAAkAAAAGAAkAAAALAAkAAAAGAAkAAAAMAAkAAAAGAAkAAAANAAkAAAAGAAkAAAAOAAkAAAAGAAkAAAAPAAkAAAAGAAkAAAAQAAkAAAAGAAkAAAARAAkAAAAGAAkAAAASAAkAAAAGAAkAAAATAAkAAAAGAAkAAAAUAAkAAAAGAAkAAAAVAAkAAAAGAAkAAAAWAAkAAAAGAAkAAAAXAAkAAAAGAAkAAAAYAAkAAAAGAAkAAAAZAAkAAAAGAAkAAAAaAAkAAAAGAAkAAAAbAAkAAAAGAAkAAAAcAAkAAAAGAAkAAAAdAAkAAAAGAAkAAAAAAAoAAAAGAAkAAAABAAoAAAAGAAkAAAACAAoAAAAGAAkAAAADAAoAAAAGAAkAAAAEAAoAAAAGAAkAAAAFAAoAAAAGAAkAAAAGAAoAAAAGAAkAAAAHAAoAAAAGAAkAAAAIAAoAAAAGAAkAAAAJAAoAAAAGAAkAAAAKAAoAAAAGAAkAAAALAAoAAAAGAAkAAAAMAAoAAAAGAAkAAAANAAoAAAAGAAkAAAAOAAoAAAAGAAkAAAAPAAoAAAAGAAkAAAAQAAoAAAAGAAkAAAARAAoAAAAGAAkAAAASAAoAAAAGAAkAAAATAAoAAAAGAAkAAAAUAAoAAAAGAAkAAAAVAAoAAAAGAAkAAAAWAAoAAAAGAAkAAAAXAAoAAAAGAAkAAAAYAAoAAAAGAAkAAAAZAAoAAAAGAAkAAAAaAAoAAAAGAAkAAAAbAAoAAAAGAAkAAAAcAAoAAAAGAAkAAAAdAAoAAAAGAAkAAAAAAAsAAAAGAAkAAAABAAsAAAAGAAkAAAACAAsAAAAGAAkAAAADAAsAAAAGAAkAAAAEAAsAAAAGAAkAAAAFAAsAAAAGAAkAAAAGAAsAAAAGAAkAAAAHAAsAAAAGAAkAAAAIAAsAAAAGAAkAAAAJAAsAAAAGAAkAAAAKAAsAAAAGAAkAAAALAAsAAAAGAAkAAAAMAAsAAAAGAAkAAAANAAsAAAAGAAkAAAAOAAsAAAAGAAkAAAAPAAsAAAAGAAkAAAAQAAsAAAAGAAkAAAARAAsAAAAGAAkAAAASAAsAAAAGAAkAAAATAAsAAAAGAAkAAAAUAAsAAAAGAAkAAAAVAAsAAAAGAAkAAAAWAAsAAAAGAAkAAAAXAAsAAAAGAAkAAAAYAAsAAAAGAAkAAAAZAAsAAAAGAAkAAAAaAAsAAAAGAAkAAAAbAAsAAAAGAAkAAAAcAAsAAAAGAAkAAAAdAAsAAAAGAAkAAAAAAAwAAAAGAAkAAAABAAwAAAAGAAkAAAACAAwAAAAGAAkAAAADAAwAAAAGAAkAAAAEAAwAAAAGAAkAAAAFAAwAAAAGAAkAAAAGAAwAAAAGAAkAAAAHAAwAAAAGAAkAAAAIAAwAAAAGAAkAAAAJAAwAAAAGAAkAAAAKAAwAAAAGAAkAAAALAAwAAAAGAAkAAAAMAAwAAAAGAAkAAAANAAwAAAAGAAkAAAAOAAwAAAAGAAkAAAAPAAwAAAAGAAkAAAAQAAwAAAAGAAkAAAARAAwAAAAGAAkAAAASAAwAAAAGAAkAAAATAAwAAAAGAAkAAAAUAAwAAAAGAAkAAAAVAAwAAAAGAAkAAAAWAAwAAAAGAAkAAAAXAAwAAAAGAAkAAAAYAAwAAAAGAAkAAAAZAAwAAAAGAAkAAAAaAAwAAAAGAAkAAAAbAAwAAAAGAAkAAAAcAAwAAAAGAAkAAAAdAAwAAAAGAAkAAAAAAA0AAAAGAAkAAAABAA0AAAAGAAkAAAACAA0AAAAGAAkAAAADAA0AAAAGAAkAAAAEAA0AAAAGAAkAAAAFAA0AAAAGAAkAAAAGAA0AAAAGAAkAAAAHAA0AAAAGAAkAAAAIAA0AAAAGAAkAAAAJAA0AAAAGAAkAAAAKAA0AAAAGAAkAAAALAA0AAAAGAAkAAAAMAA0AAAAGAAkAAAANAA0AAAAGAAkAAAAOAA0AAAAGAAkAAAAPAA0AAAAGAAkAAAAQAA0AAAAGAAkAAAARAA0AAAAGAAkAAAASAA0AAAAGAAkAAAATAA0AAAAGAAkAAAAUAA0AAAAGAAkAAAAVAA0AAAAGAAkAAAAWAA0AAAAGAAkAAAAXAA0AAAAGAAkAAAAYAA0AAAAGAAkAAAAZAA0AAAAGAAkAAAAaAA0AAAAGAAkAAAAbAA0AAAAGAAkAAAAcAA0AAAAGAAkAAAAdAA0AAAAGAAkAAAAAAA4AAAAGAAkAAAABAA4AAAAGAAkAAAACAA4AAAAGAAkAAAADAA4AAAAGAAkAAAAEAA4AAAAGAAkAAAAFAA4AAAAGAAkAAAAGAA4AAAAGAAkAAAAHAA4AAAAGAAkAAAAIAA4AAAAGAAkAAAAJAA4AAAAGAAkAAAAKAA4AAAAGAAkAAAALAA4AAAAGAAkAAAAMAA4AAAAGAAkAAAANAA4AAAAGAAkAAAAOAA4AAAAGAAkAAAAPAA4AAAAGAAkAAAAQAA4AAAAGAAkAAAARAA4AAAAGAAkAAAASAA4AAAAGAAkAAAATAA4AAAAGAAkAAAAUAA4AAAAGAAkAAAAVAA4AAAAGAAkAAAAWAA4AAAAGAAkAAAAXAA4AAAAGAAkAAAAYAA4AAAAGAAkAAAAZAA4AAAAGAAkAAAAaAA4AAAAGAAkAAAAbAA4AAAAGAAkAAAAcAA4AAAAGAAkAAAAdAA4AAAAGAAkAAAAAAA8AAAAGAAkAAAABAA8AAAAGAAkAAAACAA8AAAAGAAkAAAADAA8AAAAGAAkAAAAEAA8AAAAGAAkAAAAFAA8AAAAGAAkAAAAGAA8AAAAGAAkAAAAHAA8AAAAGAAkAAAAIAA8AAAAGAAkAAAAJAA8AAAAGAAkAAAAKAA8AAAAGAAkAAAALAA8AAAAGAAkAAAAMAA8AAAAGAAkAAAANAA8AAAAGAAkAAAAOAA8AAAAGAAkAAAAPAA8AAAAGAAkAAAAQAA8AAAAGAAkAAAARAA8AAAAGAAkAAAASAA8AAAAGAAkAAAATAA8AAAAGAAkAAAAUAA8AAAAGAAkAAAAVAA8AAAAGAAkAAAAWAA8AAAAGAAkAAAAXAA8AAAAGAAkAAAAYAA8AAAAGAAkAAAAZAA8AAAAGAAkAAAAaAA8AAAAGAAkAAAAbAA8AAAAGAAkAAAAcAA8AAAAGAAkAAAAdAA8AAAAGAAkAAAAAABAAAAAGAAkAAAABABAAAAAGAAkAAAACABAAAAAGAAkAAAADABAAAAAGAAkAAAAEABAAAAAGAAkAAAAFABAAAAAGAAkAAAAGABAAAAAGAAkAAAAHABAAAAAGAAkAAAAIABAAAAAGAAkAAAAJABAAAAAGAAkAAAAKABAAAAAGAAkAAAALABAAAAAGAAkAAAAMABAAAAAGAAkAAAANABAAAAAGAAkAAAAOABAAAAAGAAkAAAAPABAAAAAGAAkAAAAQABAAAAAGAAkAAAARABAAAAAGAAkAAAASABAAAAAGAAkAAAATABAAAAAGAAkAAAAUABAAAAAGAAkAAAAVABAAAAAGAAkAAAAWABAAAAAGAAkAAAAXABAAAAAGAAkAAAAYABAAAAAGAAkAAAAZABAAAAAGAAkAAAAaABAAAAAGAAkAAAAbABAAAAAGAAkAAAAcABAAAAAGAAkAAAAdABAAAAAGAAkAAAAAABEAAAAGAAkAAAABABEAAAAGAAkAAAACABEAAAAGAAkAAAADABEAAAAGAAkAAAAEABEAAAAGAAkAAAAFABEAAAAGAAkAAAAGABEAAAAGAAkAAAAHABEAAAAGAAkAAAAIABEAAAAGAAkAAAAJABEAAAAGAAkAAAAKABEAAAAGAAkAAAALABEAAAAGAAkAAAAMABEAAAAGAAkAAAANABEAAAAGAAkAAAAOABEAAAAGAAkAAAAPABEAAAAGAAkAAAAQABEAAAAGAAkAAAARABEAAAAGAAkAAAASABEAAAAGAAkAAAATABEAAAAGAAkAAAAUABEAAAAGAAkAAAAVABEAAAAGAAkAAAAWABEAAAAGAAkAAAAXABEAAAAGAAkAAAAYABEAAAAGAAkAAAAZABEAAAAGAAkAAAAaABEAAAAGAAkAAAAbABEAAAAGAAkAAAAcABEAAAAGAAkAAAAdABEAAAAGAAkAAAAeABEAAAAGAAkAAAAfABEAAAAGAAkAAAAfABAAAAAGAAkAAAAeABAAAAAGAAkAAAAeAA8AAAAGAAkAAAAfAA8AAAAGAAkAAAAfAA4AAAAGAAkAAAAeAA4AAAAGAAkAAAAeAA0AAAAGAAkAAAAeAAwAAAAGAAkAAAAfAAwAAAAGAAkAAAAfAA0AAAAGAAkAAAAeAAsAAAAGAAkAAAAeAAoAAAAGAAkAAAAfAAoAAAAGAAkAAAAfAAkAAAAGAAkAAAAfAAsAAAAGAAkAAAAfAAAAAAAGAAkAAAAeAAAAAAAGAAkAAAAeAAEAAAAGAAkAAAAfAAEAAAAGAAkAAAAfAAIAAAAGAAkAAAAeAAIAAAAGAAkAAAAeAAMAAAAGAAkAAAAeAAQAAAAGAAkAAAAfAAQAAAAGAAkAAAAfAAUAAAAGAAkAAAAfAAYAAAAGAAkAAAAfAAMAAAAGAAkAAAAeAAUAAAAGAAkAAAAeAAYAAAAGAAkAAAAeAAcAAAAGAAkAAAAeAAgAAAAGAAkAAAAfAAgAAAAGAAkAAAAfAAcAAAAGAAkAAAAeAAkAAAAGAAkAAAA=")
@@ -656,193 +647,201 @@ tile_set = SubResource("TileSet_f5tq1")
 metadata/class = "tilelayer"
 metadata/id = 2
 
-[node name="Bloques" type="TileMapLayer" parent="." unique_id=138945057]
+[node name="Bloques" type="TileMapLayer" parent="."]
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
-tile_map_data = PackedByteArray("AAAAAAAAAAAGAAYAAAABAAAAAAAGAAYAAAACAAAAAAAGAAYAAAADAAAAAAAGAAYAAAAEAAAAAAAGAAYAAAAFAAAAAAAGAAYAAAAGAAAAAAAGAAYAAAAHAAAAAAAGAAYAAAAIAAAAAAAGAAYAAAAJAAAAAAAGAAYAAAAKAAAAAAAGAAYAAAALAAAAAAAGAAYAAAATAAAAAAABAAYAAAAUAAAAAAACAAYAAAAVAAAAAAACAAYAAAAWAAAAAAACAAYAAAAXAAAAAAACAAYAAAAYAAAAAAACAAYAAAAZAAAAAAACAAYAAAAaAAAAAAACAAYAAAAbAAAAAAACAAYAAAAcAAAAAAACAAYAAAAdAAAAAAACAAYAAAAVAAEAAAAGAAYAAAAIAAMAAAAGAAYAAAAJAAMAAAAGAAYAAAAKAAMAAAAGAAYAAAAWAAUAAAAGAAYAAAAXAAUAAAAGAAYAAAAYAAUAAAAGAAYAAAAZAAUAAAAGAAYAAAAbAAkAAAAGAAYAAAAcAAkAAAAGAAYAAAAdAAkAAAAGAAYAAAAAAA4AAAABAAcAAAAAAA8AAAABAAgAAAAAABAAAAABAAkAAAAAABEAAAABAAYAACABAA4AAAACAAcAAAABAA8AAAACAAgAAAABABAAAAACAAkAAAABABEAAAACAAYAACACAA4AAAADAAcAAAACAA8AAAADAAgAAAACABAAAAADAAkAAAACABEAAAADAAYAACADABEAAAABAAYAACAEAAwAAAAGAAYAAAAEABEAAAACAAYAACAFAAwAAAAGAAYAAAAFABEAAAADAAYAACAGAAwAAAAGAAYAAAAGABEAAAACAAYAACAHAAwAAAAGAAYAAAAHABEAAAACAAYAACAIABEAAAACAAYAACAJABEAAAACAAYAACAKABEAAAABAAYAACALABEAAAABAAYAACAMABEAAAABAAYAACASABEAAAAGAAYAAAATABEAAAAGAAYAAAAUABEAAAAGAAYAAAAZABEAAAAGAAYAAAAaABEAAAAGAAYAAAAbABEAAAAGAAYAAAAcABEAAAAGAAYAAAAeAAkAAAAGAAYAAAAfAAkAAAAGAAYAAAAeAAAAAAACAAYAAAAfAAAAAAADAAYAAAAdAAEAAAABAAcAAAAdAAIAAAABAAgAAAAdAAMAAAABAAkAAAAeAAEAAAACAAcAAAAeAAIAAAACAAgAAAAeAAMAAAACAAkAAAAfAAEAAAADAAcAAAAfAAIAAAADAAgAAAAfAAMAAAADAAkAAAAAAAYAAAAGAAYAAAABAAYAAAAGAAYAAAACAAYAAAAGAAYAAAADAAYAAAAGAAYAAAAEAAYAAAAGAAYAAAAFAAYAAAAGAAYAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAAGAAYAAAABAAAAAAAGAAYAAAACAAAAAAAGAAYAAAADAAAAAAAGAAYAAAAEAAAAAAAGAAYAAAAFAAAAAAAGAAYAAAAGAAAAAAAGAAYAAAAHAAAAAAAGAAYAAAAIAAAAAAAGAAYAAAAJAAAAAAAGAAYAAAAKAAAAAAAGAAYAAAALAAAAAAAGAAYAAAATAAAAAAABAAYAAAAUAAAAAAACAAYAAAAVAAAAAAACAAYAAAAWAAAAAAACAAYAAAAaAAAAAAADAAQAACAbAAAAAAABAAQAACAcAAAAAAABAAQAACAdAAAAAAABAAQAACAIAAMAAAAGAAYAAAAJAAMAAAAGAAYAAAAKAAMAAAAGAAYAAAAWAAUAAAAGAAYAAAAXAAUAAAAGAAYAAAAYAAUAAAAGAAYAAAAbAAkAAAAGAAYAAAAcAAkAAAAGAAYAAAAdAAkAAAAGAAYAAAAAAA4AAAABAAcAAAAAAA8AAAABAAgAAAAAABAAAAABAAkAAAAAABEAAAAAAAQAAAABAA4AAAACAAcAAAABAA8AAAACAAgAAAABABAAAAACAAkAAAABABEAAAABAAQAAAACAA4AAAADAAcAAAACAA8AAAADAAgAAAACABAAAAADAAkAAAACABEAAAABAAQAAAADABEAAAABAAQAAAAEAAwAAAAGAAYAAAAEABEAAAABAAQAAAAFAAwAAAAGAAYAAAAFABEAAAACAAQAAAAGAAwAAAAGAAYAAAAGABEAAAABAAQAAAAHAAwAAAAGAAYAAAAHABEAAAABAAQAAAAIABEAAAABAAQAAAAJABEAAAABAAQAAAAKABEAAAABAAQAAAALABEAAAABAAQAAAAMABEAAAAAAAQAABASABEAAAAGAAYAAAATABEAAAAGAAYAAAAUABEAAAAGAAYAAAAZABEAAAAGAAYAAAAaABEAAAAGAAYAAAAbABEAAAAGAAYAAAAcABEAAAAGAAYAAAAeAAkAAAAGAAYAAAAfAAkAAAAGAAYAAAAeAAAAAAACAAQAACAfAAAAAAAAAAQAADAdAAEAAAABAAcAAAAdAAIAAAABAAgAAAAdAAMAAAABAAkAAAAeAAEAAAACAAcAAAAeAAIAAAACAAgAAAAeAAMAAAACAAkAAAAfAAEAAAADAAcAAAAfAAIAAAADAAgAAAAfAAMAAAADAAkAAAAAAAYAAAAGAAYAAAABAAYAAAAGAAYAAAACAAYAAAAGAAYAAAADAAYAAAAGAAYAAAAEAAYAAAAGAAYAAAAFAAYAAAAGAAYAAAAWAAEAAAAGAAYAAAD//wgAAAAGAAYAAAD//wkAAAAGAAYAAAD//woAAAAGAAYAAAD//wsAAAAGAAYAAAD//wwAAAAGAAYAAAD//w0AAAAGAAYAAAD//w4AAAAGAAYAAAD//w8AAAAGAAYAAAD//xAAAAAGAAYAAAAZAAAAAAAAAAQAACA=")
 tile_set = SubResource("TileSet_f5tq1")
 metadata/class = "tilelayer"
 metadata/id = 1
 
-[node name="Trampas" type="Node2D" parent="." unique_id=882023642]
+[node name="Trampas" type="Node2D" parent="."]
 texture_filter = 1
 
-[node name="Bolas" type="Node2D" parent="Trampas" unique_id=1719239280]
+[node name="Bolas" type="Node2D" parent="Trampas"]
 
-[node name="Bola" parent="Trampas/Bolas" unique_id=254565368 instance=ExtResource("6_h7x84")]
+[node name="Bola" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(569, 919)
 
-[node name="Bola2" parent="Trampas/Bolas" unique_id=1102930444 instance=ExtResource("6_h7x84")]
+[node name="Bola2" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(496, 919)
 
-[node name="Bola3" parent="Trampas/Bolas" unique_id=532881710 instance=ExtResource("6_h7x84")]
+[node name="Bola3" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(2005, 1318)
 
-[node name="Bola4" parent="Trampas/Bolas" unique_id=43130740 instance=ExtResource("6_h7x84")]
+[node name="Bola4" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(2081, 1318)
 
-[node name="Bola5" parent="Trampas/Bolas" unique_id=641864224 instance=ExtResource("6_h7x84")]
+[node name="Bola5" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(2162, 1318)
 
-[node name="Bola6" parent="Trampas/Bolas" unique_id=812181814 instance=ExtResource("6_h7x84")]
+[node name="Bola6" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(2243, 1317)
 
-[node name="Bola7" parent="Trampas/Bolas" unique_id=207802457 instance=ExtResource("6_h7x84")]
+[node name="Bola7" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(2166, 674)
 
-[node name="Bola8" parent="Trampas/Bolas" unique_id=1855004782 instance=ExtResource("6_h7x84")]
+[node name="Bola8" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(2248, 674)
 
-[node name="Bola9" parent="Trampas/Bolas" unique_id=1048941752 instance=ExtResource("6_h7x84")]
+[node name="Bola9" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(2330, 672)
 
-[node name="Bola10" parent="Trampas/Bolas" unique_id=258495633 instance=ExtResource("6_h7x84")]
+[node name="Bola10" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(2411, 674)
 
-[node name="Bola11" parent="Trampas/Bolas" unique_id=1859261831 instance=ExtResource("6_h7x84")]
+[node name="Bola11" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
 position = Vector2(2492, 674)
 
-[node name="Bola12" parent="Trampas/Bolas" unique_id=332292153 instance=ExtResource("6_h7x84")]
-position = Vector2(644, 1318)
+[node name="Bola12" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
+position = Vector2(644, 1316)
 
-[node name="Bola13" parent="Trampas/Bolas" unique_id=1615370582 instance=ExtResource("6_h7x84")]
-position = Vector2(721, 1318)
+[node name="Bola13" parent="Trampas/Bolas" instance=ExtResource("6_h7x84")]
+position = Vector2(720, 1316)
 
-[node name="Pinchos" type="Node2D" parent="Trampas" unique_id=380813184]
+[node name="Pinchos" type="Node2D" parent="Trampas"]
 
-[node name="Pincho" parent="Trampas/Pinchos" unique_id=608726065 instance=ExtResource("7_hvmil")]
+[node name="Pincho" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
 position = Vector2(426, 480)
 
-[node name="Pincho2" parent="Trampas/Pinchos" unique_id=1079019618 instance=ExtResource("7_hvmil")]
-position = Vector2(344, 480)
+[node name="Pincho2" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(346, 480)
 
-[node name="Pincho3" parent="Trampas/Pinchos" unique_id=170241638 instance=ExtResource("7_hvmil")]
-position = Vector2(263, 480)
+[node name="Pincho3" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(266, 480)
 
-[node name="Pincho4" parent="Trampas/Pinchos" unique_id=695228168 instance=ExtResource("7_hvmil")]
-position = Vector2(183, 480)
+[node name="Pincho4" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(186, 480)
 
-[node name="Pincho5" parent="Trampas/Pinchos" unique_id=1082240671 instance=ExtResource("7_hvmil")]
+[node name="Pincho5" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
 position = Vector2(106, 480)
 
-[node name="Pincho6" parent="Trampas/Pinchos" unique_id=1488650860 instance=ExtResource("7_hvmil")]
-position = Vector2(28, 480)
+[node name="Pincho6" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(26, 480)
 
-[node name="Pincho7" parent="Trampas/Pinchos" unique_id=541730432 instance=ExtResource("7_hvmil")]
+[node name="Pincho7" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
 position = Vector2(56, 558)
 rotation = 3.1415927
 
-[node name="Pincho8" parent="Trampas/Pinchos" unique_id=911715351 instance=ExtResource("7_hvmil")]
+[node name="Pincho8" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
 position = Vector2(139, 558)
 rotation = 3.1415927
 
-[node name="Pincho9" parent="Trampas/Pinchos" unique_id=2101116451 instance=ExtResource("7_hvmil")]
+[node name="Pincho9" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
 position = Vector2(222, 558)
 rotation = 3.1415927
 
-[node name="Pincho10" parent="Trampas/Pinchos" unique_id=527787881 instance=ExtResource("7_hvmil")]
-position = Vector2(613, 1039)
+[node name="Pincho10" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(614, 1040)
 rotation = 3.1415927
 
-[node name="Pincho11" parent="Trampas/Pinchos" unique_id=397365692 instance=ExtResource("7_hvmil")]
-position = Vector2(531, 1039)
+[node name="Pincho11" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(537, 1040)
 rotation = 3.1415927
 
-[node name="Pincho12" parent="Trampas/Pinchos" unique_id=1200145965 instance=ExtResource("7_hvmil")]
-position = Vector2(584, 1363)
+[node name="Pincho12" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(587, 1360)
 
-[node name="Pincho13" parent="Trampas/Pinchos" unique_id=1266181315 instance=ExtResource("7_hvmil")]
-position = Vector2(502, 1363)
+[node name="Pincho13" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(507, 1360)
 
-[node name="Pincho14" parent="Trampas/Pinchos" unique_id=1544809575 instance=ExtResource("7_hvmil")]
-position = Vector2(319, 1015)
+[node name="Pincho14" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(320, 1014)
 rotation = -1.5707964
 
-[node name="Pincho15" parent="Trampas/Pinchos" unique_id=1754466296 instance=ExtResource("7_hvmil")]
-position = Vector2(695, 318)
+[node name="Pincho15" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(694, 320)
 rotation = 3.1415927
 
-[node name="Pincho16" parent="Trampas/Pinchos" unique_id=1108991953 instance=ExtResource("7_hvmil")]
-position = Vector2(776, 318)
+[node name="Pincho16" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(774, 320)
 rotation = 3.1415927
 
-[node name="Pincho17" parent="Trampas/Pinchos" unique_id=1037916036 instance=ExtResource("7_hvmil")]
-position = Vector2(853, 318)
+[node name="Pincho17" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(854, 320)
 rotation = 3.1415927
 
-[node name="Pincho18" parent="Trampas/Pinchos" unique_id=198918797 instance=ExtResource("7_hvmil")]
-position = Vector2(666, 243)
+[node name="Pincho18" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(666, 240)
 
-[node name="Pincho19" parent="Trampas/Pinchos" unique_id=1041051052 instance=ExtResource("7_hvmil")]
-position = Vector2(749, 243)
+[node name="Pincho19" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(746, 240)
 
-[node name="Pincho20" parent="Trampas/Pinchos" unique_id=357791271 instance=ExtResource("7_hvmil")]
-position = Vector2(826, 242)
+[node name="Pincho20" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(826, 240)
 
-[node name="Pincho21" parent="Trampas/Pinchos" unique_id=1910860855 instance=ExtResource("7_hvmil")]
-position = Vector2(1017, -1)
+[node name="Pincho21" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(1014, 0)
 rotation = 3.1415927
 
-[node name="Pincho22" parent="Trampas/Pinchos" unique_id=1395453073 instance=ExtResource("7_hvmil")]
-position = Vector2(1099, -1)
+[node name="Pincho22" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(1094, 0)
 rotation = 3.1415927
 
-[node name="Pincho23" parent="Trampas/Pinchos" unique_id=1682695462 instance=ExtResource("7_hvmil")]
-position = Vector2(1180, 0)
+[node name="Pincho23" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(1174, 0)
 rotation = 3.1415927
 
-[node name="Pincho24" parent="Trampas/Pinchos" unique_id=1003593874 instance=ExtResource("7_hvmil")]
-position = Vector2(1263, 0)
+[node name="Pincho24" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(1254, 0)
 rotation = 3.1415927
 
-[node name="Pincho25" parent="Trampas/Pinchos" unique_id=1343558295 instance=ExtResource("7_hvmil")]
-position = Vector2(1346, 0)
+[node name="Pincho25" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(1334, 0)
 rotation = 3.1415927
 
-[node name="Pincho26" parent="Trampas/Pinchos" unique_id=1349406045 instance=ExtResource("7_hvmil")]
-position = Vector2(1575, 79)
+[node name="Pincho26" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(1575, 80)
 rotation = 3.1415927
 
-[node name="Pincho27" parent="Trampas/Pinchos" unique_id=732052737 instance=ExtResource("7_hvmil")]
-position = Vector2(1651, 79)
+[node name="Pincho27" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(1654, 80)
 rotation = 3.1415927
 
-[node name="Pincho28" parent="Trampas/Pinchos" unique_id=1427645635 instance=ExtResource("7_hvmil")]
-position = Vector2(1817, 78)
+[node name="Pincho28" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(1734, 80)
 rotation = 3.1415927
 
-[node name="Pincho29" parent="Trampas/Pinchos" unique_id=1334279145 instance=ExtResource("7_hvmil")]
-position = Vector2(1900, 78)
+[node name="Pincho29" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(1974, 480)
 rotation = 3.1415927
 
-[node name="Pincho30" parent="Trampas/Pinchos" unique_id=1338915769 instance=ExtResource("7_hvmil")]
-position = Vector2(1986, 477)
+[node name="Pincho30" parent="Trampas/Pinchos" instance=ExtResource("7_hvmil")]
+position = Vector2(1894, 480)
 rotation = 3.1415927
 
-[node name="Sierras" type="Node2D" parent="Trampas" unique_id=1146540403]
+[node name="Sierras" type="Node2D" parent="Trampas"]
 
-[node name="StaticBody2D4" parent="Trampas/Sierras" unique_id=2030833891 instance=ExtResource("8_xjsy4")]
+[node name="StaticBody2D4" parent="Trampas/Sierras" instance=ExtResource("8_xjsy4")]
 position = Vector2(1612, 1376.0001)
 scale = Vector2(7, 7)
 
-[node name="StaticBody2D5" parent="Trampas/Sierras" unique_id=581401454 instance=ExtResource("8_xjsy4")]
+[node name="StaticBody2D5" parent="Trampas/Sierras" instance=ExtResource("8_xjsy4")]
 position = Vector2(1011.0002, 1349.0001)
 scale = Vector2(7, 7)
 
-[node name="StaticBody2D6" parent="Trampas/Sierras" unique_id=1224922761 instance=ExtResource("8_xjsy4")]
+[node name="StaticBody2D6" parent="Trampas/Sierras" instance=ExtResource("8_xjsy4")]
 position = Vector2(2317.0002, 1360)
 scale = Vector2(7, 7)
 
-[node name="StaticBody2D7" parent="Trampas/Sierras" unique_id=887675652 instance=ExtResource("8_xjsy4")]
+[node name="StaticBody2D7" parent="Trampas/Sierras" instance=ExtResource("8_xjsy4")]
 position = Vector2(1211.0001, -449.99988)
 scale = Vector2(7, 7)
 
-[node name="Player" parent="." unique_id=425336149 node_paths=PackedStringArray("_deadMenu") instance=ExtResource("8_8gy00")]
-position = Vector2(2257, 563)
+[node name="StaticBody2D8" parent="Trampas/Sierras" instance=ExtResource("8_xjsy4")]
+position = Vector2(806, 632)
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D9" parent="Trampas/Sierras" instance=ExtResource("8_xjsy4")]
+position = Vector2(1574.0001, 794.00006)
+scale = Vector2(3, 3)
+
+[node name="Player" parent="." node_paths=PackedStringArray("_deadMenu") instance=ExtResource("8_8gy00")]
+position = Vector2(73, 1288)
 _areaGravityPath = NodePath("../Gravity")
 _deadMenu = NodePath("../DeadMenu")
 
-[node name="DeadMenu" parent="." unique_id=181698476 instance=ExtResource("9_nj0vv")]
+[node name="DeadMenu" parent="." instance=ExtResource("9_nj0vv")]
 visible = false
 
 [connection signal="body_entered" from="Gravity" to="Gravity" method="OnBodyEntered"]

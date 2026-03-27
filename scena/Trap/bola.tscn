@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://csiqf6vw8bbxd"]
+[gd_scene load_steps=6 format=3 uid="uid://csiqf6vw8bbxd"]
 
 [ext_resource type="Texture2D" uid="uid://by532q54olvfn" path="res://assets/Tiled/Img/Bola.png" id="1_8xpb4"]
 [ext_resource type="Script" uid="uid://bpk7kv3xwm50f" path="res://scripts/trap/BolaTile.cs" id="1_42xvr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_42xvr"]
-bounce = 0.2
+absorbent = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42xvr"]
 size = Vector2(70, 72)
@@ -12,7 +12,7 @@ size = Vector2(70, 72)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohvok"]
 size = Vector2(76, 79)
 
-[node name="Bola" type="RigidBody2D" unique_id=254565368 groups=["Trap"]]
+[node name="Bola" type="RigidBody2D" groups=["Trap"]]
 collision_layer = 4
 mass = 1000.0
 physics_material_override = SubResource("PhysicsMaterial_42xvr")
@@ -20,7 +20,7 @@ can_sleep = false
 script = ExtResource("1_42xvr")
 metadata/class = "rigidbody"
 
-[node name="Bola_tile" type="Sprite2D" parent="." unique_id=1823216407]
+[node name="Bola_tile" type="Sprite2D" parent="."]
 position = Vector2(0, 40)
 scale = Vector2(2.25, 2.25)
 texture = ExtResource("1_8xpb4")
@@ -32,15 +32,14 @@ metadata/id = 115
 metadata/can_sleep = false
 metadata/collision_layer = "3"
 
-[node name="CBola" type="CollisionShape2D" parent="." unique_id=1263317762]
+[node name="CBola" type="CollisionShape2D" parent="."]
 position = Vector2(35, 4)
 shape = SubResource("RectangleShape2D_42xvr")
 
-[node name="DeadArea" type="Area2D" parent="." unique_id=655416291]
+[node name="DeadArea" type="Area2D" parent="."]
 position = Vector2(-1, 0)
-monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeadArea" unique_id=971726372]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeadArea"]
 position = Vector2(36, 4.5)
 shape = SubResource("RectangleShape2D_ohvok")
 debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)

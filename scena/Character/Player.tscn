@@ -1,33 +1,70 @@
-[gd_scene format=3 uid="uid://c70oaut5dmori"]
+[gd_scene load_steps=10 format=3 uid="uid://c70oaut5dmori"]
 
 [ext_resource type="Script" uid="uid://ctoxbk4jt0epp" path="res://scripts/Player/Player.cs" id="1_qphiy"]
-[ext_resource type="Texture2D" uid="uid://du0bgpsdfpcxp" path="res://assets/icon.svg" id="2_xadcp"]
+[ext_resource type="Texture2D" uid="uid://b3c3ri2wcrvxk" path="res://assets/Prota/protaIdle.png" id="2_8r7ou"]
+[ext_resource type="Texture2D" uid="uid://bx74f7nj7jb8n" path="res://assets/Prota/protaRun.png" id="3_3qleb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6xjj"]
+atlas = ExtResource("2_8r7ou")
+region = Rect2(0, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6s2q"]
+atlas = ExtResource("2_8r7ou")
+region = Rect2(64, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okhqc"]
+atlas = ExtResource("3_3qleb")
+region = Rect2(0, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb6xn"]
+atlas = ExtResource("3_3qleb")
+region = Rect2(64, 0, 64, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h4ded"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_xadcp")
+"texture": SubResource("AtlasTexture_a6xjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6s2q")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okhqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb6xn")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8o1h"]
-size = Vector2(128, 128)
+size = Vector2(68, 128)
 
-[node name="Player" type="CharacterBody2D" unique_id=425336149]
+[node name="Player" type="CharacterBody2D"]
 collision_layer = 5
 script = ExtResource("1_qphiy")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1122080824]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_h4ded")
+animation = &"run"
+frame_progress = 0.10035822
+flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1245341607]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_e8o1h")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=37222759]
+[node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
 limit_right = 2560
