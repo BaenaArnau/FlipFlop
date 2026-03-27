@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://b7hkdopgliwwu"]
-=======
-[gd_resource type="Theme" format=3 uid="uid://b7hkdopgliwwu"]
->>>>>>> 851d14aee2dc18869b2d56b6058c4484e4ad0d00
 
 [ext_resource type="FontFile" uid="uid://cbt4834kviwbp" path="res://theme/Fuente/Astron Boy Italic.otf" id="1_afw5t"]
 

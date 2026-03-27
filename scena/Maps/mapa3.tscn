@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7ioopm15rcxh" path="res://scena/Trap/pincho.tscn" id="4_q0wu8"]
 [ext_resource type="PackedScene" uid="uid://csiqf6vw8bbxd" path="res://scena/Trap/bola.tscn" id="5_mo8ls"]
 [ext_resource type="PackedScene" uid="uid://d4etc1npeqxhp" path="res://scena/Trap/Sierra.tscn" id="6_1w2q7"]
-[ext_resource type="PackedScene" uid="uid://p861axvr54ab" path="res://scena/Menus/DeadMenu.tscn" id="7_8rtjf"]
+[ext_resource type="PackedScene" uid="uid://bm26ta8ii36v1" path="res://scena/Menus/DeadMenu.tscn" id="7_8rtjf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m7ym3"]
 size = Vector2(2909, 1712)
