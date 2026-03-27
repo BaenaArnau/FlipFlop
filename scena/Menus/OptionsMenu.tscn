@@ -264,14 +264,16 @@ text = "Master"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-min_value = 1.0
-value = 60.0
+min_value = -80.0
+max_value = 24.0
 
 [node name="SpinBox" type="SpinBox" parent="VBoxContainer/MarginContainer/TabContainer/Sound/MarginContainer/VBoxContainer/Master" unique_id=1250832307]
 layout_mode = 2
-value = 60.0
+min_value = -80.0
+max_value = 24.0
 rounded = true
 alignment = 1
+suffix = "dB"
 
 [node name="Music" type="HBoxContainer" parent="VBoxContainer/MarginContainer/TabContainer/Sound/MarginContainer/VBoxContainer" unique_id=1048939816]
 layout_mode = 2
@@ -287,14 +289,16 @@ text = "Music"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-min_value = 1.0
-value = 60.0
+min_value = -80.0
+max_value = 24.0
 
 [node name="SpinBox" type="SpinBox" parent="VBoxContainer/MarginContainer/TabContainer/Sound/MarginContainer/VBoxContainer/Music" unique_id=1397230412]
 layout_mode = 2
-value = 60.0
+min_value = -80.0
+max_value = 24.0
 rounded = true
 alignment = 1
+suffix = "dB"
 
 [node name="Sound FX" type="HBoxContainer" parent="VBoxContainer/MarginContainer/TabContainer/Sound/MarginContainer/VBoxContainer" unique_id=1388563870]
 layout_mode = 2
@@ -310,14 +314,16 @@ text = "Sound FX"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-min_value = 1.0
-value = 60.0
+min_value = -80.0
+max_value = 24.0
 
 [node name="SpinBox" type="SpinBox" parent="VBoxContainer/MarginContainer/TabContainer/Sound/MarginContainer/VBoxContainer/Sound FX" unique_id=534849703]
 layout_mode = 2
-value = 60.0
+min_value = -80.0
+max_value = 24.0
 rounded = true
 alignment = 1
+suffix = "dB"
 
 [node name="Enviroment" type="HBoxContainer" parent="VBoxContainer/MarginContainer/TabContainer/Sound/MarginContainer/VBoxContainer" unique_id=150055251]
 layout_mode = 2
@@ -333,14 +339,16 @@ text = "Enviroment"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-min_value = 1.0
-value = 60.0
+min_value = -80.0
+max_value = 24.0
 
 [node name="SpinBox" type="SpinBox" parent="VBoxContainer/MarginContainer/TabContainer/Sound/MarginContainer/VBoxContainer/Enviroment" unique_id=1507802890]
 layout_mode = 2
-value = 60.0
+min_value = -80.0
+max_value = 24.0
 rounded = true
 alignment = 1
+suffix = "dB"
 
 [node name="UI" type="HBoxContainer" parent="VBoxContainer/MarginContainer/TabContainer/Sound/MarginContainer/VBoxContainer" unique_id=1158182702]
 layout_mode = 2
@@ -356,14 +364,16 @@ text = "UI"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-min_value = 1.0
-value = 60.0
+min_value = -80.0
+max_value = 24.0
 
 [node name="SpinBox" type="SpinBox" parent="VBoxContainer/MarginContainer/TabContainer/Sound/MarginContainer/VBoxContainer/UI" unique_id=1178899442]
 layout_mode = 2
-value = 60.0
+min_value = -80.0
+max_value = 24.0
 rounded = true
 alignment = 1
+suffix = "dB"
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=397519775]
 layout_mode = 2
