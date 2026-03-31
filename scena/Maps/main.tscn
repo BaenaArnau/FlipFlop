@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://dvjt6o35801sj"]
+
+[ext_resource type="Script" uid="uid://dhb7kyxijsaj2" path="res://scripts/trap/Gravity.cs" id="1_f2262"]
+[ext_resource type="PackedScene" uid="uid://c70oaut5dmori" path="res://scena/Character/Player.tscn" id="2_p863f"]
+[ext_resource type="Texture2D" uid="uid://du0bgpsdfpcxp" path="res://assets/icon.svg" id="3_tdyg5"]
+[ext_resource type="PackedScene" uid="uid://dssfva0ebrpvd" path="res://scena/Menus/MenuPausa.tscn" id="4_menu_pausa"]
+[ext_resource type="PackedScene" uid="uid://bm26ta8ii36v1" path="res://scena/Menus/DeadMenu.tscn" id="5_tdyg5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ofqst"]
+size = Vector2(2567.5, 1438)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0376q"]
+size = Vector2(2561, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pupwf"]
+size = Vector2(133, 134)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p23x2"]
+size = Vector2(129, 129)
+
+[node name="Node" type="Node" unique_id=281147179]
+
+[node name="Gravity" type="Area2D" parent="." unique_id=760309407]
+modulate = Color(1, 0.14117648, 1, 1)
+position = Vector2(584, 328)
+gravity_space_override = 3
+script = ExtResource("1_f2262")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gravity" unique_id=319852065]
+modulate = Color(1, 0.14117648, 1, 1)
+position = Vector2(692.25, 385)
+shape = SubResource("RectangleShape2D_ofqst")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=25919300]
+position = Vector2(577, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=661829453]
+position = Vector2(729, -9)
+shape = SubResource("RectangleShape2D_0376q")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1911478616]
+position = Vector2(571, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1901527268]
+position = Vector2(700.5, 1427)
+shape = SubResource("RectangleShape2D_0376q")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1971353661]
+position = Vector2(-376, -76)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1934085540]
+position = Vector2(254.99998, -354)
+shape = SubResource("RectangleShape2D_0376q")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=621579064]
+position = Vector2(642, 3)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1211681691]
+position = Vector2(239.99991, -1922)
+shape = SubResource("RectangleShape2D_0376q")
+
+[node name="Player" parent="." unique_id=425336149 node_paths=PackedStringArray("_deadMenu") instance=ExtResource("2_p863f")]
+position = Vector2(570, 235)
+_areaGravityPath = NodePath("../Gravity")
+_deadMenu = NodePath("../DeadMenu")
+
+[node name="MenuPausa" parent="." unique_id=2114205393 node_paths=PackedStringArray("_playerNode") instance=ExtResource("4_menu_pausa")]
+visible = false
+_playerNode = NodePath("../Player")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=101769152 groups=["Trap"]]
+position = Vector2(252, 521)
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=478011357]
+self_modulate = Color(1, 0, 1, 1)
+position = Vector2(0, 2)
+texture = ExtResource("3_tdyg5")
+
+[node name="DeadArea" type="Area2D" parent="RigidBody2D" unique_id=399626434]
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/DeadArea" unique_id=659598947]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_pupwf")
+debug_color = Color(0.99999994, 0.019066924, 0.0029606188, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1514138663]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_p23x2")
+
+[node name="DeadMenu" parent="." unique_id=181698476 instance=ExtResource("5_tdyg5")]
+visible = false

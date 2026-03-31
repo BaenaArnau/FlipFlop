@@ -1,0 +1,58 @@
+# Godot 4+ specific
+.godot/
+.import/
+export_presets.cfg
+*.translation
+*.po
+*.pot
+
+# C# / .NET
+bin/
+obj/
+*.csproj.user
+*.sln.iml
+
+# IDEs and Editors
+# JetBrains - Rider
+.idea/
+*.DotSettings.user
+*.[Rr]e[Ss]harper
+_ReSharper*/
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono
+.mono/
+
+# System / Temporals
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# User-specific
+user_settings.json

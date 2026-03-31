@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dssfva0ebrpvd"]
+
+[ext_resource type="Script" uid="uid://ca0e7j2eqj4tq" path="res://scripts/Menus/MenuPausa.cs" id="1_nus5q"]
+[ext_resource type="Theme" uid="uid://b7hkdopgliwwu" path="res://theme/main_theme.tres" id="1_tue5e"]
+[ext_resource type="PackedScene" uid="uid://bs020765jqkky" path="res://scena/Menus/OptionsMenu.tscn" id="2_tue5e"]
+
+[node name="MenuPausa" type="Control" unique_id=2114205393 node_paths=PackedStringArray("_optionsMenu", "_returnButton", "_exitButton", "_settingsButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_tue5e")
+script = ExtResource("1_nus5q")
+_optionsMenu = NodePath("OptionsMenu")
+_returnButton = NodePath("VBoxContainer/Return")
+_exitButton = NodePath("VBoxContainer/Exit")
+_settingsButton = NodePath("VBoxContainer/Settings")
+
+[node name="TextureRect" type="ColorRect" parent="." unique_id=694734813]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.012617188, 0.012617188, 0.012617188, 0.24705882)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=909796179]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Return" type="Button" parent="VBoxContainer" unique_id=1096231260]
+layout_mode = 2
+text = "Return"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1381723975]
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=1485326270]
+layout_mode = 2
+text = "Exit"
+
+[node name="OptionsMenu" parent="." unique_id=194965363 node_paths=PackedStringArray("_puaseMenu") instance=ExtResource("2_tue5e")]
+visible = false
+layout_mode = 1
+_puaseMenu = NodePath("..")
+
+[connection signal="pressed" from="VBoxContainer/Return" to="." method="OnReturnPressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="OnSettingsPressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="OnExitPressed"]

@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://7cxmmaf66idw"]
+
+[ext_resource type="Theme" uid="uid://b7hkdopgliwwu" path="res://theme/main_theme.tres" id="1_ns751"]
+[ext_resource type="Script" uid="uid://21tbjnwmalyb" path="res://scripts/Menus/WinMenu.cs" id="2_eu6lt"]
+[ext_resource type="Shader" uid="uid://bhsgahjyq4ki2" path="res://shaders/DeadMenu.gdshader" id="3_7k5f8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8cogc"]
+shader = ExtResource("3_7k5f8")
+shader_parameter/progress = 0.0
+shader_parameter/background_color = Vector4(0, 0, 0, 1)
+
+[node name="WinMenu" type="Control" node_paths=PackedStringArray("_againButton", "_exitButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ns751")
+script = ExtResource("2_eu6lt")
+_againButton = NodePath("VBoxContainer/again")
+_exitButton = NodePath("VBoxContainer/exit")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_8cogc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.5
+offset_top = -20.0
+offset_right = 40.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Dead" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.15294118, 1, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Your Win"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="again" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Again"
+
+[node name="exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/again" to="." method="OnAgainPressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="OnExitPressed"]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7ioopm15rcxh"]
+
+[ext_resource type="Texture2D" uid="uid://b6wetk316ebv8" path="res://assets/Tiled/Img/Pinchos.png" id="1_5724p"]
+[ext_resource type="Script" uid="uid://bg8ikrxual2k8" path="res://scripts/trap/PinchoTile.cs" id="1_sogoo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sogoo"]
+size = Vector2(80, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5724p"]
+size = Vector2(80, 80)
+
+[node name="pincho" type="StaticBody2D"]
+script = ExtResource("1_sogoo")
+
+[node name="PinchosC" type="CollisionShape2D" parent="."]
+position = Vector2(14.000001, -40)
+shape = SubResource("RectangleShape2D_sogoo")
+
+[node name="Pinchos_tile11" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-26, 0)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_5724p")
+offset = Vector2(16, -16)
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+metadata/class = "area"
+metadata/id = 132
+
+[node name="DeadArea" type="Area2D" parent="."]
+collision_layer = 4
+metadata/class = "area"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeadArea"]
+position = Vector2(14, -40)
+shape = SubResource("RectangleShape2D_5724p")
+debug_color = Color(0.9928945, 0, 0.25211895, 0.41960785)
+
+[connection signal="body_entered" from="DeadArea" to="." method="OnBodyEntered"]

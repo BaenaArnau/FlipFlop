@@ -1,0 +1,72 @@
+{
+    "activeFile": "Mapa/Mapa2.tmx",
+    "expandedProjectPaths": [
+        "Objectos",
+        "Mapa",
+        ".",
+        "TileMap"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Mapa/Mapa1.tmx": {
+            "scale": 1.5526562499999998,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 216.08131226728386,
+                "y": 151.0314984401731
+            }
+        },
+        "Mapa/Mapa2.tmx": {
+            "expandedObjectLayers": [
+                6,
+                5,
+                4
+            ],
+            "scale": 1.1886,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 387.4305906108026,
+                "y": 336.1097089012283
+            }
+        },
+        "TileMap/Bola.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TileMap/Pincho.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TileMap/Sierra.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TileMap/TileMap.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "/home/dev/FlipFlop (2)/FlipFlop/assets/Tiled/Img",
+    "last.objectTemplatePath": "/home/dev/FlipFlop (2)/FlipFlop/assets/Tiled/Objectos",
+    "last.worldFilePath": "/home/dev/FlipFlop (2)/FlipFlop-Menus/assets/Tiled/Mapa",
+    "openFiles": [
+        "Mapa/Mapa1.tmx",
+        "TileMap/Bola.tsx",
+        "TileMap/Sierra.tsx",
+        "TileMap/TileMap.tsx",
+        "Mapa/Mapa2.tmx",
+        "TileMap/Pincho.tsx"
+    ],
+    "project": "Tiled.tiled-project",
+    "property.type": "string",
+    "recentFiles": [
+        "Mapa/Mapa1.tmx",
+        "TileMap/Bola.tsx",
+        "TileMap/Sierra.tsx",
+        "TileMap/TileMap.tsx",
+        "TileMap/Pincho.tsx",
+        "Mapa/Mapa2.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}

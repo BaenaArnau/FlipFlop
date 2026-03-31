@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://c70oaut5dmori"]
+
+[ext_resource type="Script" uid="uid://ctoxbk4jt0epp" path="res://scripts/Player/Player.cs" id="1_qphiy"]
+[ext_resource type="Texture2D" uid="uid://b3c3ri2wcrvxk" path="res://assets/Prota/protaIdle.png" id="2_8r7ou"]
+[ext_resource type="Texture2D" uid="uid://bx74f7nj7jb8n" path="res://assets/Prota/protaRun.png" id="3_3qleb"]
+[ext_resource type="AudioStream" uid="uid://cm2mnus52xruu" path="res://assets/musica/tmpubima4i9.mp3" id="4_3qleb"]
+[ext_resource type="AudioStream" uid="uid://b7a8c0plsfln3" path="res://assets/musica/466451__patrick_corra__loopable-hum.wav" id="4_a6xjj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6xjj"]
+atlas = ExtResource("2_8r7ou")
+region = Rect2(0, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6s2q"]
+atlas = ExtResource("2_8r7ou")
+region = Rect2(64, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okhqc"]
+atlas = ExtResource("3_3qleb")
+region = Rect2(0, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb6xn"]
+atlas = ExtResource("3_3qleb")
+region = Rect2(64, 0, 64, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4ded"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6xjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6s2q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okhqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb6xn")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8o1h"]
+size = Vector2(53, 117)
+
+[node name="Player" type="CharacterBody2D" unique_id=172655136 node_paths=PackedStringArray("_sound", "_teleport")]
+collision_layer = 5
+script = ExtResource("1_qphiy")
+_sound = NodePath("AudioStreamPlayer2D")
+_teleport = NodePath("Teleport")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1448987375]
+texture_filter = 1
+scale = Vector2(1.7, 1.7)
+sprite_frames = SubResource("SpriteFrames_h4ded")
+animation = &"run"
+frame_progress = 0.10035822
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2105528754]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_e8o1h")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1330395617]
+limit_left = 0
+limit_top = 0
+limit_right = 2560
+limit_bottom = 1440
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1715226844]
+stream = ExtResource("4_a6xjj")
+bus = &"sound fx"
+
+[node name="Teleport" type="AudioStreamPlayer2D" parent="." unique_id=1345157661]
+stream = ExtResource("4_3qleb")
+bus = &"sound fx"

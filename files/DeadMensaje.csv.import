@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://caqg4pd5x4i4m"
+
+[deps]
+
+files=["res://files/DeadMensaje.mensaje.translation"]
+
+source_file="res://files/DeadMensaje.csv"
+dest_files=["res://files/DeadMensaje.mensaje.translation"]
+
+[params]
+
+compress=1
+delimiter=0
